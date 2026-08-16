@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Muhammed.R — Стих</title>
+    <title>Muhammed.R</title>
 
     <style>
         * {
@@ -19,130 +19,173 @@
         }
 
         .page {
-            max-width: 850px;
-            margin: 0 auto;
-            padding: 60px 25px 100px;
+            min-height: 100vh;
+            padding: 35px 25px;
+            display: flex;
+            flex-direction: column;
         }
 
-        .top {
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             font-family: Arial, sans-serif;
-            font-size: 12px;
-            letter-spacing: 5px;
-            color: #999999;
-            margin-bottom: 100px;
-        }
-
-        h1 {
-            font-size: clamp(48px, 10vw, 100px);
-            font-weight: normal;
-            line-height: 0.95;
-            margin: 0 0 30px;
-        }
-
-        .line {
-            width: 100%;
-            height: 1px;
-            background: #444444;
-            margin: 35px 0 60px;
-        }
-
-        .poem-title {
-            font-family: Arial, sans-serif;
-            font-size: 13px;
+            font-size: 11px;
             letter-spacing: 4px;
-            text-transform: uppercase;
-            color: #999999;
-            margin-bottom: 35px;
-        }
-
-        .poem {
-            font-size: clamp(20px, 3vw, 27px);
-            line-height: 1.7;
-            color: #dedbd5;
-        }
-
-        .poem p {
-            margin: 0 0 35px;
-        }
-
-        .ending {
-            margin-top: 70px;
-            font-size: 14px;
-            font-family: Arial, sans-serif;
-            letter-spacing: 3px;
             color: #888888;
         }
 
-        footer {
-            margin-top: 120px;
-            padding-top: 25px;
-            border-top: 1px solid #333333;
+        .number {
+            color: #555555;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 80px 0;
+        }
+
+        .eyebrow {
             font-family: Arial, sans-serif;
             font-size: 11px;
+            letter-spacing: 5px;
+            color: #888888;
+            margin-bottom: 35px;
+        }
+
+        h1 {
+            font-size: clamp(65px, 13vw, 150px);
+            font-weight: normal;
+            line-height: 0.85;
+            margin: 0;
+            letter-spacing: -5px;
+        }
+
+        .description {
+            max-width: 620px;
+            margin-top: 50px;
+            font-size: clamp(20px, 3vw, 28px);
+            line-height: 1.5;
+            color: #bdbab4;
+        }
+
+        .enter {
+            display: inline-flex;
+            align-items: center;
+            gap: 25px;
+            margin-top: 65px;
+            width: fit-content;
+            color: #f2f0eb;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            letter-spacing: 4px;
+            border-bottom: 1px solid #777777;
+            padding-bottom: 12px;
+            transition: 0.3s;
+        }
+
+        .enter span {
+            font-size: 20px;
+            transition: 0.3s;
+        }
+
+        .enter:hover {
+            color: #aaaaaa;
+        }
+
+        .enter:hover span {
+            transform: translateX(8px);
+        }
+
+        .quote {
+            margin-top: 100px;
+            padding-top: 25px;
+            border-top: 1px solid #333333;
+            font-size: 16px;
+            font-style: italic;
+            color: #777777;
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-between;
+            font-family: Arial, sans-serif;
+            font-size: 9px;
             letter-spacing: 3px;
-            color: #666666;
+            color: #555555;
+            padding-top: 25px;
+        }
+
+        @media (max-width: 600px) {
+            .page {
+                padding: 30px 25px;
+            }
+
+            h1 {
+                letter-spacing: -3px;
+            }
+
+            main {
+                padding: 60px 0;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 12px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <main class="page">
+<div class="page">
 
-        <div class="top">
-            MUHAMMED.R
+    <header>
+        <div>MUHAMMED.R</div>
+        <div class="number">00 — 01</div>
+    </header>
+
+    <main>
+
+        <div class="eyebrow">
+            MUSIC · POETRY · PHOTOGRAPHY
         </div>
 
         <h1>
-            Не запасной<br>
-            вариант.
+            Muhammed.R
         </h1>
 
-        <div class="line"></div>
-
-        <div class="poem-title">
-            Личные мысли
+        <div class="description">
+            Words I never said out loud.
+            <br>
+            A collection of music, thoughts
+            and memories.
         </div>
 
-        <div class="poem">
+        <a href="poetry.html" class="enter">
+            ENTER MY WORLD
+            <span>→</span>
+        </a>
 
-            <p>
-                Я не переношу людей, которые однажды
-                выбирают кого-то вместо меня.
-                А потом, когда у них никого не остаётся,
-                они вновь перебегают обратно.
-            </p>
-
-            <p>
-                Искатели наилучших выгод.
-                Нет, не надо ко мне возвращаться.
-                Я не хочу ни для кого
-                быть запасным вариантом.
-            </p>
-
-            <p>
-                Чем старше и мудрее человек,
-                тем меньше ему хочется выяснять отношения.
-                Хочется просто встать,
-                пожелать всего хорошего и уйти.
-            </p>
-
-            <p>
-                Здесь вам не пункт постоянного приёма.
-                Меняйте своё направление.
-            </p>
-
+        <div class="quote">
+            “Some things are better felt than explained.”
         </div>
-
-        <div class="ending">
-            — M.R.
-        </div>
-
-        <footer>
-            MUSIC · POETRY · PHOTOGRAPHY
-        </footer>
 
     </main>
+
+    <footer>
+        <div>PERSONAL ARCHIVE</div>
+        <div>© 2026 MUHAMMED.R</div>
+    </footer>
+
+</div>
 
 </body>
 </html>
