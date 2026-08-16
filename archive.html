@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Muhammed.R — The Archive</title>
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            margin: 0;
+
+            background: #111111;
+
+            color: #f2f0eb;
+
+            font-family:
+                Arial,
+                sans-serif;
+
+        }
+
+
+        .page {
+
+            max-width: 1000px;
+
+            margin: 0 auto;
+
+            padding:
+                40px 25px 100px;
+
+        }
+
+
+        header {
+
+            display: flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            padding-bottom: 30px;
+
+            border-bottom:
+                1px solid #333333;
+
+            font-size: 10px;
+
+            letter-spacing: 4px;
+
+            color: #777777;
+
+        }
+
+
+        .back {
+
+            color: #777777;
+
+            text-decoration: none;
+
+            transition:
+                color 0.3s ease;
+
+        }
+
+
+        .back:hover {
+
+            color: #ffffff;
+
+        }
+
+
+        main {
+
+            padding-top: 100px;
+
+        }
+
+
+        .label {
+
+            font-size: 10px;
+
+            letter-spacing: 5px;
+
+            color: #777777;
+
+            margin-bottom: 30px;
+
+        }
+
+
+        h1 {
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                clamp(70px, 13vw, 150px);
+
+            font-weight: normal;
+
+            line-height: 0.85;
+
+            margin: 0;
+
+            letter-spacing: -5px;
+
+        }
+
+
+        .intro {
+
+            max-width: 600px;
+
+            margin-top: 45px;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 22px;
+
+            line-height: 1.6;
+
+            color: #aaa7a1;
+
+        }
+
+
+        .archive {
+
+            margin-top: 100px;
+
+            border-top:
+                1px solid #333333;
+
+        }
+
+
+        .item {
+
+            display: grid;
+
+            grid-template-columns:
+                100px 1fr 40px;
+
+            align-items:
+                center;
+
+            gap: 30px;
+
+            padding: 35px 0;
+
+            border-bottom:
+                1px solid #333333;
+
+            text-decoration: none;
+
+            color: #f2f0eb;
+
+            transition:
+                padding-left 0.4s ease,
+                color 0.4s ease;
+
+        }
+
+
+        .item:hover {
+
+            padding-left: 15px;
+
+            color: #aaa7a1;
+
+        }
+
+
+        .number {
+
+            font-size: 11px;
+
+            letter-spacing: 3px;
+
+            color: #555555;
+
+        }
+
+
+        .title {
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 30px;
+
+            margin-bottom: 7px;
+
+        }
+
+
+        .description {
+
+            font-size: 11px;
+
+            letter-spacing: 1px;
+
+            color: #666666;
+
+        }
+
+
+        .arrow {
+
+            font-size: 22px;
+
+            color: #666666;
+
+            transition:
+                transform 0.4s ease;
+
+        }
+
+
+        .item:hover .arrow {
+
+            transform:
+                translateX(8px);
+
+        }
+
+
+        footer {
+
+            margin-top: 120px;
+
+            padding-top: 25px;
+
+            border-top:
+                1px solid #333333;
+
+            display: flex;
+
+            justify-content:
+                space-between;
+
+            font-size: 9px;
+
+            letter-spacing: 3px;
+
+            color: #555555;
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            main {
+
+                padding-top: 70px;
+
+            }
+
+
+            .item {
+
+                grid-template-columns:
+                    55px 1fr 25px;
+
+                gap: 15px;
+
+            }
+
+
+            .title {
+
+                font-size: 23px;
+
+            }
+
+
+            .intro {
+
+                font-size: 19px;
+
+            }
+
+
+            footer {
+
+                flex-direction:
+                    column;
+
+                gap: 15px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="page">
+
+
+    <header>
+
+        <div>
+            MUHAMMED.R
+        </div>
+
+
+        <a
+            href="index.html"
+            class="back"
+        >
+            ← HOME
+        </a>
+
+    </header>
+
+
+    <main>
+
+
+        <div class="label">
+            PERSONAL ARCHIVE
+        </div>
+
+
+        <h1>
+            The<br>
+            Archive.
+        </h1>
+
+
+        <div class="intro">
+
+            A collection of words,
+            thoughts, memories and
+            moments that became part
+            of my story.
+
+        </div>
+
+
+        <div class="archive">
+
+
+            <a
+                href="poetry.html"
+                class="item"
+            >
+
+                <div class="number">
+                    001
+                </div>
+
+
+                <div>
+
+                    <div class="title">
+                        Poetry
+                    </div>
+
+                    <div class="description">
+                        WORDS THAT REMAIN
+                    </div>
+
+                </div>
+
+
+                <div class="arrow">
+                    →
+                </div>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="item"
+            >
+
+                <div class="number">
+                    002
+                </div>
+
+
+                <div>
+
+                    <div class="title">
+                        Thoughts
+                    </div>
+
+                    <div class="description">
+                        THINGS I NEVER SAID
+                    </div>
+
+                </div>
+
+
+                <div class="arrow">
+                    →
+                </div>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="item"
+            >
+
+                <div class="number">
+                    003
+                </div>
+
+
+                <div>
+
+                    <div class="title">
+                        Moments
+                    </div>
+
+                    <div class="description">
+                        MEMORIES WITHOUT DATES
+                    </div>
+
+                </div>
+
+
+                <div class="arrow">
+                    →
+                </div>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="item"
+            >
+
+                <div class="number">
+                    004
+                </div>
+
+
+                <div>
+
+                    <div class="title">
+                        Letters
+                    </div>
+
+                    <div class="description">
+                        NEVER SENT
+                    </div>
+
+                </div>
+
+
+                <div class="arrow">
+                    →
+                </div>
+
+            </a>
+
+
+        </div>
+
+
+    </main>
+
+
+    <footer>
+
+        <div>
+            MUHAMMED.R
+        </div>
+
+
+        <div>
+            ARCHIVE · 2026
+        </div>
+
+    </footer>
+
+
+</div>
+
+
+</body>
+
+</html>
