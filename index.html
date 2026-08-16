@@ -21,7 +21,7 @@ body {
     background: #111111;
     color: #f2f0eb;
     font-family: Georgia, "Times New Roman", serif;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.6s ease;
 }
 
 body.leaving {
@@ -192,7 +192,9 @@ h1 {
     margin-top: 75px;
 
     display: flex;
+
     align-items: center;
+
     gap: 12px;
 
     font-family: Arial, sans-serif;
@@ -385,7 +387,9 @@ footer {
 
     .links {
         flex-direction: column;
+
         gap: 25px;
+
         align-items: flex-start;
     }
 
@@ -399,6 +403,7 @@ footer {
 
     footer {
         flex-direction: column;
+
         gap: 15px;
     }
 
@@ -558,16 +563,13 @@ Between silence and sound.
 
 <footer>
 
-
 <div>
 PERSONAL ARCHIVE
 </div>
 
-
 <div>
 © 2026 MUHAMMED.R
 </div>
-
 
 </footer>
 
@@ -576,6 +578,9 @@ PERSONAL ARCHIVE
 
 
 <script>
+
+
+/* POETRY TRANSITION */
 
 const enterWorld =
     document.getElementById("enterWorld");
@@ -605,28 +610,105 @@ enterWorld.addEventListener(
 );
 
 
+/* LIVE CLOCK */
+
 function updateClock() {
 
-    const now = new Date();
+    const now =
+        new Date();
 
     const hours =
-        String(now.getHours()).padStart(2, "0");
+        String(
+            now.getHours()
+        ).padStart(2, "0");
 
     const minutes =
-        String(now.getMinutes()).padStart(2, "0");
+        String(
+            now.getMinutes()
+        ).padStart(2, "0");
 
     const seconds =
-        String(now.getSeconds()).padStart(2, "0");
+        String(
+            now.getSeconds()
+        ).padStart(2, "0");
 
-    document.getElementById("clock").textContent =
-        hours + ":" + minutes + ":" + seconds;
+    document.getElementById(
+        "clock"
+    ).textContent =
+        hours +
+        ":" +
+        minutes +
+        ":" +
+        seconds;
 
 }
 
-
 updateClock();
 
-setInterval(updateClock, 1000);
+setInterval(
+    updateClock,
+    1000
+);
+
+
+/* SECRET CODE */
+
+let secretCode = "";
+
+const secretWord =
+    "MUHAMMED";
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        const key =
+            event.key.toUpperCase();
+
+        if (
+            key.length === 1 &&
+            key.match(/[A-Z]/)
+        ) {
+
+            secretCode += key;
+
+            if (
+                secretCode.length >
+                secretWord.length
+            ) {
+
+                secretCode =
+                    secretCode.slice(
+                        -secretWord.length
+                    );
+
+            }
+
+            if (
+                secretCode ===
+                secretWord
+            ) {
+
+                document.body.classList.add(
+                    "leaving"
+                );
+
+                setTimeout(
+                    function() {
+
+                        window.location.href =
+                            "secret.html";
+
+                    },
+                    600
+                );
+
+            }
+
+        }
+
+    }
+);
 
 </script>
 
