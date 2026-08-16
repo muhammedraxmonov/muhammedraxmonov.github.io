@@ -188,6 +188,63 @@ h1 {
         translateX(8px);
 }
 
+.status {
+    margin-top: 75px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: #666666;
+
+    opacity: 0;
+
+    animation:
+        fadeUp 1.2s ease 1.3s forwards;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #777777;
+
+    animation:
+        pulse 2s infinite;
+}
+
+@keyframes pulse {
+
+    0%, 100% {
+        opacity: 0.35;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+}
+
+.time {
+    margin-top: 18px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    color: #555555;
+}
+
 .quote {
     margin-top: 120px;
 
@@ -204,7 +261,7 @@ h1 {
     opacity: 0;
 
     animation:
-        fadeUp 1.2s ease 1.4s forwards;
+        fadeUp 1.2s ease 1.5s forwards;
 }
 
 .about {
@@ -217,7 +274,7 @@ h1 {
     opacity: 0;
 
     animation:
-        fadeUp 1.2s ease 1.7s forwards;
+        fadeUp 1.2s ease 1.8s forwards;
 }
 
 .about-label {
@@ -431,6 +488,23 @@ THE ARCHIVE
 </div>
 
 
+<div class="status">
+
+<div class="dot"></div>
+
+LOCAL TIME · ONLINE
+
+</div>
+
+
+<div
+    class="time"
+    id="clock"
+>
+00:00:00
+</div>
+
+
 <div class="quote">
 
 “Some things are better felt
@@ -506,6 +580,7 @@ PERSONAL ARCHIVE
 const enterWorld =
     document.getElementById("enterWorld");
 
+
 enterWorld.addEventListener(
     "click",
     function(event) {
@@ -528,6 +603,30 @@ enterWorld.addEventListener(
 
     }
 );
+
+
+function updateClock() {
+
+    const now = new Date();
+
+    const hours =
+        String(now.getHours()).padStart(2, "0");
+
+    const minutes =
+        String(now.getMinutes()).padStart(2, "0");
+
+    const seconds =
+        String(now.getSeconds()).padStart(2, "0");
+
+    document.getElementById("clock").textContent =
+        hours + ":" + minutes + ":" + seconds;
+
+}
+
+
+updateClock();
+
+setInterval(updateClock, 1000);
 
 </script>
 
