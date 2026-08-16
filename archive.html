@@ -3,323 +3,257 @@
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Muhammed.R — The Archive</title>
+<title>Muhammed.R — The Archive</title>
 
 
-    <style>
+<style>
 
-        * {
-            box-sizing: border-box;
-        }
+* {
+    box-sizing: border-box;
+}
 
 
-        body {
+body {
+    margin: 0;
+    background: #111111;
+    color: #f2f0eb;
+    font-family: Arial, sans-serif;
+}
 
-            margin: 0;
 
-            background: #111111;
+.page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 25px 100px;
+}
 
-            color: #f2f0eb;
 
-            font-family:
-                Arial,
-                sans-serif;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-        }
+    padding-bottom: 30px;
 
+    border-bottom: 1px solid #333333;
 
-        .page {
+    font-size: 10px;
+    letter-spacing: 4px;
 
-            max-width: 1000px;
+    color: #777777;
+}
 
-            margin: 0 auto;
 
-            padding:
-                40px 25px 100px;
+.back {
+    color: #777777;
+    text-decoration: none;
 
-        }
+    transition: color 0.3s ease;
+}
 
 
-        header {
+.back:hover {
+    color: #ffffff;
+}
 
-            display: flex;
 
-            justify-content:
-                space-between;
+main {
+    padding-top: 100px;
+}
 
-            align-items:
-                center;
 
-            padding-bottom: 30px;
+.label {
+    font-size: 10px;
+    letter-spacing: 5px;
 
-            border-bottom:
-                1px solid #333333;
+    color: #777777;
 
-            font-size: 10px;
+    margin-bottom: 30px;
+}
 
-            letter-spacing: 4px;
 
-            color: #777777;
+h1 {
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-        }
+    font-size:
+        clamp(70px, 13vw, 150px);
 
+    font-weight: normal;
 
-        .back {
+    line-height: 0.85;
 
-            color: #777777;
+    margin: 0;
 
-            text-decoration: none;
+    letter-spacing: -5px;
+}
 
-            transition:
-                color 0.3s ease;
 
-        }
+.intro {
+    max-width: 600px;
 
+    margin-top: 45px;
 
-        .back:hover {
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-            color: #ffffff;
+    font-size: 22px;
 
-        }
+    line-height: 1.6;
 
+    color: #aaa7a1;
+}
 
-        main {
 
-            padding-top: 100px;
+.archive {
+    margin-top: 100px;
 
-        }
+    border-top:
+        1px solid #333333;
+}
 
 
-        .label {
+.item {
+    display: grid;
 
-            font-size: 10px;
+    grid-template-columns:
+        100px 1fr 40px;
 
-            letter-spacing: 5px;
+    align-items: center;
 
-            color: #777777;
+    gap: 30px;
 
-            margin-bottom: 30px;
+    padding: 35px 0;
 
-        }
+    border-bottom:
+        1px solid #333333;
 
+    text-decoration: none;
 
-        h1 {
+    color: #f2f0eb;
 
-            font-family:
-                Georgia,
-                "Times New Roman",
-                serif;
+    transition:
+        padding-left 0.4s ease,
+        color 0.4s ease;
+}
 
-            font-size:
-                clamp(70px, 13vw, 150px);
 
-            font-weight: normal;
+.item:hover {
+    padding-left: 15px;
 
-            line-height: 0.85;
+    color: #aaa7a1;
+}
 
-            margin: 0;
 
-            letter-spacing: -5px;
+.number {
+    font-size: 11px;
 
-        }
+    letter-spacing: 3px;
 
+    color: #555555;
+}
 
-        .intro {
 
-            max-width: 600px;
+.title {
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-            margin-top: 45px;
+    font-size: 30px;
 
-            font-family:
-                Georgia,
-                "Times New Roman",
-                serif;
+    margin-bottom: 7px;
+}
 
-            font-size: 22px;
 
-            line-height: 1.6;
+.description {
+    font-size: 11px;
 
-            color: #aaa7a1;
+    letter-spacing: 1px;
 
-        }
+    color: #666666;
+}
 
 
-        .archive {
+.arrow {
+    font-size: 22px;
 
-            margin-top: 100px;
+    color: #666666;
 
-            border-top:
-                1px solid #333333;
+    transition:
+        transform 0.4s ease;
+}
 
-        }
 
+.item:hover .arrow {
+    transform:
+        translateX(8px);
+}
 
-        .item {
 
-            display: grid;
+footer {
+    margin-top: 120px;
 
-            grid-template-columns:
-                100px 1fr 40px;
+    padding-top: 25px;
 
-            align-items:
-                center;
+    border-top:
+        1px solid #333333;
 
-            gap: 30px;
+    display: flex;
 
-            padding: 35px 0;
+    justify-content:
+        space-between;
 
-            border-bottom:
-                1px solid #333333;
+    font-size: 9px;
 
-            text-decoration: none;
+    letter-spacing: 3px;
 
-            color: #f2f0eb;
+    color: #555555;
+}
 
-            transition:
-                padding-left 0.4s ease,
-                color 0.4s ease;
 
-        }
+@media (max-width: 600px) {
 
+    main {
+        padding-top: 70px;
+    }
 
-        .item:hover {
 
-            padding-left: 15px;
+    .item {
+        grid-template-columns:
+            55px 1fr 25px;
 
-            color: #aaa7a1;
+        gap: 15px;
+    }
 
-        }
 
+    .title {
+        font-size: 23px;
+    }
 
-        .number {
 
-            font-size: 11px;
+    .intro {
+        font-size: 19px;
+    }
 
-            letter-spacing: 3px;
 
-            color: #555555;
+    footer {
+        flex-direction: column;
 
-        }
+        gap: 15px;
+    }
 
+}
 
-        .title {
-
-            font-family:
-                Georgia,
-                "Times New Roman",
-                serif;
-
-            font-size: 30px;
-
-            margin-bottom: 7px;
-
-        }
-
-
-        .description {
-
-            font-size: 11px;
-
-            letter-spacing: 1px;
-
-            color: #666666;
-
-        }
-
-
-        .arrow {
-
-            font-size: 22px;
-
-            color: #666666;
-
-            transition:
-                transform 0.4s ease;
-
-        }
-
-
-        .item:hover .arrow {
-
-            transform:
-                translateX(8px);
-
-        }
-
-
-        footer {
-
-            margin-top: 120px;
-
-            padding-top: 25px;
-
-            border-top:
-                1px solid #333333;
-
-            display: flex;
-
-            justify-content:
-                space-between;
-
-            font-size: 9px;
-
-            letter-spacing: 3px;
-
-            color: #555555;
-
-        }
-
-
-        @media (max-width: 600px) {
-
-            main {
-
-                padding-top: 70px;
-
-            }
-
-
-            .item {
-
-                grid-template-columns:
-                    55px 1fr 25px;
-
-                gap: 15px;
-
-            }
-
-
-            .title {
-
-                font-size: 23px;
-
-            }
-
-
-            .intro {
-
-                font-size: 19px;
-
-            }
-
-
-            footer {
-
-                flex-direction:
-                    column;
-
-                gap: 15px;
-
-            }
-
-        }
-
-    </style>
+</style>
 
 </head>
 
@@ -330,188 +264,196 @@
 <div class="page">
 
 
-    <header>
+<header>
 
-        <div>
-            MUHAMMED.R
-        </div>
+<div>
+MUHAMMED.R
+</div>
 
 
-        <a
-            href="index.html"
-            class="back"
-        >
-            ← HOME
-        </a>
+<a
+    href="index.html"
+    class="back"
+>
+    ← HOME
+</a>
 
-    </header>
+</header>
 
 
-    <main>
+<main>
 
 
-        <div class="label">
-            PERSONAL ARCHIVE
-        </div>
+<div class="label">
+PERSONAL ARCHIVE
+</div>
 
 
-        <h1>
-            The<br>
-            Archive.
-        </h1>
+<h1>
+The<br>
+Archive.
+</h1>
 
 
-        <div class="intro">
+<div class="intro">
 
-            A collection of words,
-            thoughts, memories and
-            moments that became part
-            of my story.
+A collection of words,
+thoughts, memories and
+moments that became part
+of my story.
 
-        </div>
+</div>
 
 
-        <div class="archive">
+<div class="archive">
 
 
-            <a
-                href="poetry.html"
-                class="item"
-            >
+<!-- 001 — POETRY -->
 
-                <div class="number">
-                    001
-                </div>
+<a
+    href="poetry.html"
+    class="item"
+>
 
+<div class="number">
+001
+</div>
 
-                <div>
 
-                    <div class="title">
-                        Poetry
-                    </div>
+<div>
 
-                    <div class="description">
-                        WORDS THAT REMAIN
-                    </div>
+<div class="title">
+Poetry
+</div>
 
-                </div>
+<div class="description">
+WORDS THAT REMAIN
+</div>
 
+</div>
 
-                <div class="arrow">
-                    →
-                </div>
 
-            </a>
+<div class="arrow">
+→
+</div>
 
+</a>
 
-            <a
-                href="#"
-                class="item"
-            >
 
-                <div class="number">
-                    002
-                </div>
+<!-- 002 — THOUGHTS -->
 
+<a
+    href="thoughts.html"
+    class="item"
+>
 
-                <div>
+<div class="number">
+002
+</div>
 
-                    <div class="title">
-                        Thoughts
-                    </div>
 
-                    <div class="description">
-                        THINGS I NEVER SAID
-                    </div>
+<div>
 
-                </div>
+<div class="title">
+Thoughts
+</div>
 
+<div class="description">
+THINGS I NEVER SAID
+</div>
 
-                <div class="arrow">
-                    →
-                </div>
+</div>
 
-            </a>
 
+<div class="arrow">
+→
+</div>
 
-            <a
-                href="#"
-                class="item"
-            >
+</a>
 
-                <div class="number">
-                    003
-                </div>
 
+<!-- 003 — MOMENTS -->
 
-                <div>
+<a
+    href="#"
+    class="item"
+>
 
-                    <div class="title">
-                        Moments
-                    </div>
+<div class="number">
+003
+</div>
 
-                    <div class="description">
-                        MEMORIES WITHOUT DATES
-                    </div>
 
-                </div>
+<div>
 
+<div class="title">
+Moments
+</div>
 
-                <div class="arrow">
-                    →
-                </div>
+<div class="description">
+MEMORIES WITHOUT DATES
+</div>
 
-            </a>
+</div>
 
 
-            <a
-                href="#"
-                class="item"
-            >
+<div class="arrow">
+→
+</div>
 
-                <div class="number">
-                    004
-                </div>
+</a>
 
 
-                <div>
+<!-- 004 — LETTERS -->
 
-                    <div class="title">
-                        Letters
-                    </div>
+<a
+    href="#"
+    class="item"
+>
 
-                    <div class="description">
-                        NEVER SENT
-                    </div>
+<div class="number">
+004
+</div>
 
-                </div>
 
+<div>
 
-                <div class="arrow">
-                    →
-                </div>
+<div class="title">
+Letters
+</div>
 
-            </a>
+<div class="description">
+NEVER SENT
+</div>
 
+</div>
 
-        </div>
 
+<div class="arrow">
+→
+</div>
 
-    </main>
+</a>
 
 
-    <footer>
+</div>
 
-        <div>
-            MUHAMMED.R
-        </div>
 
+</main>
 
-        <div>
-            ARCHIVE · 2026
-        </div>
 
-    </footer>
+<footer>
+
+<div>
+MUHAMMED.R
+</div>
+
+
+<div>
+ARCHIVE · 2026
+</div>
+
+</footer>
 
 
 </div>
