@@ -179,12 +179,43 @@ h1 {
 }
 
 
+/* MEMORY */
+
+.memory {
+    margin-top: 35px;
+
+    min-height: 38px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: #666666;
+
+    opacity: 0;
+
+    animation:
+        fadeUp 1s ease 0.7s forwards;
+
+    transition:
+        opacity 0.5s ease;
+}
+
+.memory strong {
+    color: #999999;
+
+    font-weight: normal;
+}
+
+
 /* DESCRIPTION */
 
 .description {
     max-width: 620px;
 
-    margin-top: 45px;
+    margin-top: 35px;
 
     font-size:
         clamp(20px, 3vw, 28px);
@@ -196,7 +227,7 @@ h1 {
     opacity: 0;
 
     animation:
-        fadeUp 1.2s ease 0.8s forwards;
+        fadeUp 1.2s ease 0.9s forwards;
 }
 
 
@@ -292,6 +323,7 @@ h1 {
 
 .dot {
     width: 6px;
+
     height: 6px;
 
     border-radius: 50%;
@@ -537,9 +569,10 @@ footer {
 <body>
 
 
-<!-- CUSTOM CURSOR -->
-
-<div class="cursor" id="cursor"></div>
+<div
+class="cursor"
+id="cursor"
+></div>
 
 
 <div class="page">
@@ -573,6 +606,16 @@ MUSIC · POETRY · PHOTOGRAPHY
 Muhammed.R
 
 </h1>
+
+
+<div
+class="memory"
+id="memory"
+>
+
+THE SITE REMEMBERS
+
+</div>
 
 
 <div class="description">
@@ -922,8 +965,6 @@ hoverElements.forEach(
 });
 
 
-/* SHOW CURSOR ON DESKTOP */
-
 if (
     window.matchMedia(
         "(pointer: fine)"
@@ -934,6 +975,60 @@ if (
         "block";
 
 }
+
+
+/* THE SITE REMEMBERS */
+
+const memory =
+document.getElementById(
+    "memory"
+);
+
+
+let visits =
+    Number(
+        localStorage.getItem(
+            "muhammedVisits"
+        )
+    ) || 0;
+
+
+visits++;
+
+
+localStorage.setItem(
+    "muhammedVisits",
+    visits
+);
+
+
+if (visits === 1) {
+
+    memory.innerHTML =
+        "FIRST VISIT. · <strong>I DON'T KNOW YOU YET.</strong>";
+
+}
+else if (visits === 2) {
+
+    memory.innerHTML =
+        "WELCOME BACK. · <strong>I REMEMBER YOU.</strong>";
+
+}
+else if (visits === 3) {
+
+    memory.innerHTML =
+        "YOU CAME BACK AGAIN. · <strong>I WAS EXPECTING YOU.</strong>";
+
+}
+else {
+
+    memory.innerHTML =
+        "VISIT " +
+        visits +
+        ". · <strong>YOU KEEP COMING BACK.</strong>";
+
+}
+
 
 </script>
 
