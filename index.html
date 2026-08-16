@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 
 <meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+content="width=device-width, initial-scale=1.0">
 
 <title>Muhammed.R</title>
 
@@ -28,6 +28,9 @@ body.leaving {
     opacity: 0;
 }
 
+
+/* INTRO ANIMATION */
+
 @keyframes fadeUp {
 
     from {
@@ -42,13 +45,20 @@ body.leaving {
 
 }
 
+
+/* PAGE */
+
 .page {
     min-height: 100vh;
+
     padding: 32px 25px;
 
     display: flex;
     flex-direction: column;
 }
+
+
+/* HEADER */
 
 header {
     display: flex;
@@ -60,7 +70,9 @@ header {
     border-bottom: 1px solid #333333;
 
     font-family: Arial, sans-serif;
+
     font-size: 10px;
+
     letter-spacing: 4px;
 
     color: #888888;
@@ -73,19 +85,28 @@ header {
     color: #555555;
 }
 
+
+/* MAIN */
+
 main {
     max-width: 900px;
+
     width: 100%;
 
     margin: 0 auto;
 
-    padding: 90px 0 70px;
+    padding:
+        90px 0 70px;
 }
+
+
+/* EYEBROW */
 
 .eyebrow {
     font-family: Arial, sans-serif;
 
     font-size: 10px;
+
     letter-spacing: 5px;
 
     color: #777777;
@@ -97,6 +118,9 @@ main {
     animation:
         fadeUp 1s ease 0.3s forwards;
 }
+
+
+/* TITLE */
 
 h1 {
     font-size:
@@ -116,6 +140,9 @@ h1 {
         fadeUp 1.2s ease 0.5s forwards;
 }
 
+
+/* DESCRIPTION */
+
 .description {
     max-width: 620px;
 
@@ -134,9 +161,14 @@ h1 {
         fadeUp 1.2s ease 0.8s forwards;
 }
 
+
+/* LINKS */
+
 .links {
     display: flex;
+
     flex-wrap: wrap;
+
     gap: 35px;
 
     margin-top: 60px;
@@ -146,6 +178,7 @@ h1 {
     animation:
         fadeUp 1.2s ease 1.1s forwards;
 }
+
 
 .enter {
     display: inline-flex;
@@ -164,13 +197,15 @@ h1 {
 
     letter-spacing: 5px;
 
-    border-bottom: 1px solid #777777;
+    border-bottom:
+        1px solid #777777;
 
     padding-bottom: 13px;
 
     transition:
         color 0.3s ease;
 }
+
 
 .enter span {
     font-size: 20px;
@@ -179,14 +214,19 @@ h1 {
         transform 0.3s ease;
 }
 
+
 .enter:hover {
     color: #aaaaaa;
 }
+
 
 .enter:hover span {
     transform:
         translateX(8px);
 }
+
+
+/* STATUS */
 
 .status {
     margin-top: 75px;
@@ -211,8 +251,10 @@ h1 {
         fadeUp 1.2s ease 1.3s forwards;
 }
 
+
 .dot {
     width: 6px;
+
     height: 6px;
 
     border-radius: 50%;
@@ -222,6 +264,7 @@ h1 {
     animation:
         pulse 2s infinite;
 }
+
 
 @keyframes pulse {
 
@@ -235,6 +278,7 @@ h1 {
 
 }
 
+
 .time {
     margin-top: 18px;
 
@@ -247,12 +291,16 @@ h1 {
     color: #555555;
 }
 
+
+/* QUOTE */
+
 .quote {
     margin-top: 120px;
 
     padding-top: 30px;
 
-    border-top: 1px solid #333333;
+    border-top:
+        1px solid #333333;
 
     font-size: 20px;
 
@@ -262,22 +310,35 @@ h1 {
 
     opacity: 0;
 
-    animation:
-        fadeUp 1.2s ease 1.5s forwards;
+    transform:
+        translateY(35px);
+
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
 }
+
+
+/* ABOUT */
 
 .about {
     margin-top: 100px;
 
     padding-top: 35px;
 
-    border-top: 1px solid #333333;
+    border-top:
+        1px solid #333333;
 
     opacity: 0;
 
-    animation:
-        fadeUp 1.2s ease 1.8s forwards;
+    transform:
+        translateY(35px);
+
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
 }
+
 
 .about-label {
     font-family: Arial, sans-serif;
@@ -290,6 +351,7 @@ h1 {
 
     margin-bottom: 35px;
 }
+
 
 .about h2 {
     font-size:
@@ -304,6 +366,7 @@ h1 {
     letter-spacing: -2px;
 }
 
+
 .about p {
     max-width: 650px;
 
@@ -316,6 +379,7 @@ h1 {
     color: #aaa7a1;
 }
 
+
 .signature {
     margin-top: 55px;
 
@@ -327,6 +391,7 @@ h1 {
 
     color: #888888;
 }
+
 
 .signature span {
     display: block;
@@ -347,6 +412,9 @@ h1 {
     color: #666666;
 }
 
+
+/* FOOTER */
+
 footer {
     max-width: 900px;
 
@@ -356,11 +424,13 @@ footer {
 
     padding-top: 25px;
 
-    border-top: 1px solid #333333;
+    border-top:
+        1px solid #333333;
 
     display: flex;
 
-    justify-content: space-between;
+    justify-content:
+        space-between;
 
     font-family: Arial, sans-serif;
 
@@ -369,7 +439,19 @@ footer {
     letter-spacing: 3px;
 
     color: #555555;
+
+    opacity: 0;
+
+    transform:
+        translateY(35px);
+
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
 }
+
+
+/* MOBILE */
 
 @media (max-width: 600px) {
 
@@ -390,7 +472,8 @@ footer {
 
         gap: 25px;
 
-        align-items: flex-start;
+        align-items:
+            flex-start;
     }
 
     .quote {
@@ -437,12 +520,16 @@ MUHAMMED.R
 
 
 <div class="eyebrow">
+
 MUSIC · POETRY · PHOTOGRAPHY
+
 </div>
 
 
 <h1>
+
 Muhammed.R
+
 </h1>
 
 
@@ -462,9 +549,9 @@ thoughts and memories.
 
 
 <a
-    href="poetry.html"
-    class="enter"
-    id="enterWorld"
+href="poetry.html"
+class="enter"
+id="enterWorld"
 >
 
 ENTER MY WORLD
@@ -477,8 +564,8 @@ ENTER MY WORLD
 
 
 <a
-    href="archive.html"
-    class="enter"
+href="archive.html"
+class="enter"
 >
 
 THE ARCHIVE
@@ -503,10 +590,12 @@ LOCAL TIME · ONLINE
 
 
 <div
-    class="time"
-    id="clock"
+class="time"
+id="clock"
 >
+
 00:00:00
+
 </div>
 
 
@@ -522,14 +611,18 @@ than explained.”
 
 
 <div class="about-label">
+
 ABOUT ME
+
 </div>
 
 
 <h2>
 
 I collect moments,
+
 <br>
+
 not things.
 
 </h2>
@@ -549,7 +642,9 @@ to be remembered.
 MUHAMMED.R
 
 <span>
+
 Between silence and sound.
+
 </span>
 
 </div>
@@ -583,30 +678,32 @@ PERSONAL ARCHIVE
 /* POETRY TRANSITION */
 
 const enterWorld =
-    document.getElementById("enterWorld");
+document.getElementById(
+    "enterWorld"
+);
 
 
 enterWorld.addEventListener(
-    "click",
-    function(event) {
+"click",
+function(event) {
 
-        event.preventDefault();
+    event.preventDefault();
 
-        document.body.classList.add(
-            "leaving"
-        );
+    document.body.classList.add(
+        "leaving"
+    );
 
-        setTimeout(
-            function() {
+    setTimeout(
+    function() {
 
-                window.location.href =
-                    "poetry.html";
+        window.location.href =
+            "poetry.html";
 
-            },
-            500
-        );
+    },
+    500
+    );
 
-    }
+}
 );
 
 
@@ -651,64 +748,53 @@ setInterval(
 );
 
 
-/* SECRET CODE */
+/* SCROLL REVEAL */
 
-let secretCode = "";
+const revealItems =
+document.querySelectorAll(
+    ".quote, .about, footer"
+);
 
-const secretWord =
-    "MUHAMMED";
 
-document.addEventListener(
-    "keydown",
-    function(event) {
+const revealObserver =
+new IntersectionObserver(
+(entries) => {
 
-        const key =
-            event.key.toUpperCase();
+    entries.forEach(
+    (entry) => {
 
         if (
-            key.length === 1 &&
-            key.match(/[A-Z]/)
+            entry.isIntersecting
         ) {
 
-            secretCode += key;
+            entry.target.style.opacity =
+                "1";
 
-            if (
-                secretCode.length >
-                secretWord.length
-            ) {
+            entry.target.style.transform =
+                "translateY(0)";
 
-                secretCode =
-                    secretCode.slice(
-                        -secretWord.length
-                    );
-
-            }
-
-            if (
-                secretCode ===
-                secretWord
-            ) {
-
-                document.body.classList.add(
-                    "leaving"
-                );
-
-                setTimeout(
-                    function() {
-
-                        window.location.href =
-                            "secret.html";
-
-                    },
-                    600
-                );
-
-            }
+            revealObserver.unobserve(
+                entry.target
+            );
 
         }
 
-    }
+    });
+
+},
+{
+    threshold: 0.15
+}
 );
+
+
+revealItems.forEach(
+(item) => {
+
+    revealObserver.observe(item);
+
+});
+
 
 </script>
 
