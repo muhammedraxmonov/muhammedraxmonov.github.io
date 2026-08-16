@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Muhammed.R — Leave a Trace</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #111111;
+    color: #f2f0eb;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.page {
+    max-width: 850px;
+    margin: 0 auto;
+
+    padding: 40px 25px 100px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+
+    padding-bottom: 30px;
+
+    border-bottom:
+        1px solid #333333;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    color: #777777;
+}
+
+.back {
+    color: #777777;
+    text-decoration: none;
+
+    transition:
+        color 0.3s ease;
+}
+
+.back:hover {
+    color: #ffffff;
+}
+
+main {
+    padding-top: 90px;
+}
+
+.label {
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 5px;
+
+    color: #666666;
+
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size:
+        clamp(60px, 13vw, 125px);
+
+    font-weight: normal;
+
+    line-height: 0.85;
+
+    letter-spacing: -5px;
+
+    margin: 0;
+}
+
+.intro {
+    max-width: 600px;
+
+    margin-top: 40px;
+
+    font-size: 21px;
+
+    line-height: 1.6;
+
+    color: #999691;
+}
+
+
+/* FORM */
+
+.form {
+    margin-top: 80px;
+
+    padding-top: 40px;
+
+    border-top:
+        1px solid #333333;
+}
+
+.field {
+    margin-bottom: 35px;
+}
+
+label {
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    color: #666666;
+}
+
+input,
+textarea {
+    width: 100%;
+
+    border: none;
+
+    border-bottom:
+        1px solid #444444;
+
+    background: transparent;
+
+    color: #f2f0eb;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 19px;
+
+    padding: 12px 0;
+
+    outline: none;
+
+    resize: none;
+}
+
+textarea {
+    min-height: 120px;
+}
+
+input:focus,
+textarea:focus {
+    border-bottom-color:
+        #aaaaaa;
+}
+
+button {
+    margin-top: 10px;
+
+    background: transparent;
+
+    color: #f2f0eb;
+
+    border: none;
+
+    border-bottom:
+        1px solid #777777;
+
+    padding:
+        0 0 12px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 5px;
+
+    cursor: pointer;
+}
+
+button:hover {
+    color: #aaaaaa;
+}
+
+
+/* MESSAGE */
+
+.message {
+    margin-top: 70px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: #777777;
+
+    min-height: 20px;
+}
+
+
+/* NOTES */
+
+.notes {
+    margin-top: 100px;
+
+    border-top:
+        1px solid #333333;
+}
+
+.note {
+    padding: 35px 0;
+
+    border-bottom:
+        1px solid #333333;
+}
+
+.note-text {
+    font-size: 21px;
+
+    line-height: 1.7;
+
+    color: #d2cfc9;
+}
+
+.note-name {
+    margin-top: 20px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: #666666;
+}
+
+footer {
+    margin-top: 100px;
+
+    padding-top: 25px;
+
+    border-top:
+        1px solid #333333;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: #555555;
+}
+
+@media (max-width: 600px) {
+
+    main {
+        padding-top: 70px;
+    }
+
+    .intro {
+        font-size: 19px;
+    }
+
+    .note-text {
+        font-size: 19px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="page">
+
+
+<header>
+
+<div>
+MUHAMMED.R
+</div>
+
+<a
+href="index.html"
+class="back"
+>
+← HOME
+</a>
+
+</header>
+
+
+<main>
+
+
+<div class="label">
+GUESTBOOK
+</div>
+
+
+<h1>
+Leave<br>
+a Trace.
+</h1>
+
+
+<div class="intro">
+
+You were here.
+
+Leave a thought,
+a feeling, or simply
+a few words.
+
+</div>
+
+
+<div class="form">
+
+
+<div class="field">
+
+<label>
+NAME · OPTIONAL
+</label>
+
+<input
+id="name"
+type="text"
+placeholder="Anonymous"
+maxlength="40"
+>
+
+</div>
+
+
+<div class="field">
+
+<label>
+YOUR MESSAGE
+</label>
+
+<textarea
+id="message"
+placeholder="What did you feel here?"
+maxlength="300"
+></textarea>
+
+</div>
+
+
+<button
+onclick="sendMessage()"
+>
+
+LEAVE YOUR TRACE →
+
+</button>
+
+
+<div
+class="message"
+id="status"
+></div>
+
+
+</div>
+
+
+<div
+class="notes"
+id="notes"
+>
+
+
+<div class="note">
+
+<div class="note-text">
+
+“This place feels strangely familiar.”
+
+</div>
+
+<div class="note-name">
+
+— ANONYMOUS
+
+</div>
+
+</div>
+
+
+<div class="note">
+
+<div class="note-text">
+
+“I came for the music
+and stayed for the words.”
+
+</div>
+
+<div class="note-name">
+
+— A.
+
+</div>
+
+</div>
+
+
+</div>
+
+
+</main>
+
+
+<footer>
+
+PERSONAL ARCHIVE · MUHAMMED.R
+
+</footer>
+
+
+</div>
+
+
+<script>
+
+function sendMessage() {
+
+    const name =
+        document.getElementById(
+            "name"
+        ).value.trim();
+
+    const message =
+        document.getElementById(
+            "message"
+        ).value.trim();
+
+    const status =
+        document.getElementById(
+            "status"
+        );
+
+    if (!message) {
+
+        status.textContent =
+            "WRITE SOMETHING FIRST.";
+
+        return;
+
+    }
+
+    status.textContent =
+        "MESSAGE RECEIVED.";
+
+    document.getElementById(
+        "message"
+    ).value = "";
+
+    document.getElementById(
+        "name"
+    ).value = "";
+
+}
+
+</script>
+
+
+</body>
+
+</html>
