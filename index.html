@@ -3,491 +3,351 @@
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
-    <title>Muhammed.R</title>
+<title>Muhammed.R</title>
 
+<style>
 
-    <style>
+* {
+    box-sizing: border-box;
+}
 
-        * {
-            box-sizing: border-box;
-        }
+body {
+    margin: 0;
+    background: #111111;
+    color: #f2f0eb;
+    font-family: Georgia, "Times New Roman", serif;
+    transition: opacity 0.5s ease;
+}
 
+body.leaving {
+    opacity: 0;
+}
 
-        /* PAGE */
+@keyframes fadeUp {
 
-        body {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
 
-            margin: 0;
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 
-            background: #111111;
+}
 
-            color: #f2f0eb;
+.page {
+    min-height: 100vh;
+    padding: 32px 25px;
 
-            font-family:
-                Georgia,
-                "Times New Roman",
-                serif;
+    display: flex;
+    flex-direction: column;
+}
 
-            transition:
-                opacity 0.5s ease;
-        }
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
+    padding-bottom: 25px;
 
-        body.leaving {
+    border-bottom: 1px solid #333333;
 
-            opacity: 0;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 4px;
 
-        }
+    color: #888888;
 
+    animation:
+        fadeUp 1s ease forwards;
+}
 
-        /* ANIMATION */
+.number {
+    color: #555555;
+}
 
-        @keyframes fadeUp {
+main {
+    max-width: 900px;
+    width: 100%;
 
-            from {
+    margin: 0 auto;
 
-                opacity: 0;
+    padding: 90px 0 70px;
+}
 
-                transform:
-                    translateY(25px);
+.eyebrow {
+    font-family: Arial, sans-serif;
 
-            }
+    font-size: 10px;
+    letter-spacing: 5px;
 
-            to {
+    color: #777777;
 
-                opacity: 1;
+    margin-bottom: 35px;
 
-                transform:
-                    translateY(0);
+    opacity: 0;
 
-            }
+    animation:
+        fadeUp 1s ease 0.3s forwards;
+}
 
-        }
+h1 {
+    font-size:
+        clamp(65px, 13vw, 150px);
 
+    font-weight: normal;
 
-        /* PAGE CONTAINER */
+    line-height: 0.85;
 
-        .page {
+    margin: 0;
 
-            min-height: 100vh;
+    letter-spacing: -5px;
 
-            padding:
-                32px 25px;
+    opacity: 0;
 
-            display: flex;
+    animation:
+        fadeUp 1.2s ease 0.5s forwards;
+}
 
-            flex-direction: column;
+.description {
+    max-width: 620px;
 
-        }
+    margin-top: 45px;
 
+    font-size:
+        clamp(20px, 3vw, 28px);
 
-        /* HEADER */
+    line-height: 1.5;
 
-        header {
+    color: #aaa7a1;
 
-            display: flex;
+    opacity: 0;
 
-            justify-content:
-                space-between;
+    animation:
+        fadeUp 1.2s ease 0.8s forwards;
+}
 
-            align-items:
-                center;
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
 
-            font-family:
-                Arial, sans-serif;
+    margin-top: 60px;
 
-            font-size: 10px;
+    opacity: 0;
 
-            letter-spacing: 4px;
+    animation:
+        fadeUp 1.2s ease 1.1s forwards;
+}
 
-            color: #888888;
+.enter {
+    display: inline-flex;
 
-            padding-bottom: 25px;
+    align-items: center;
 
-            border-bottom:
-                1px solid #333333;
+    gap: 25px;
 
-            animation:
-                fadeUp 1s ease forwards;
+    color: #f2f0eb;
 
-        }
+    text-decoration: none;
 
+    font-family: Arial, sans-serif;
 
-        .number {
+    font-size: 10px;
 
-            color: #555555;
+    letter-spacing: 5px;
 
-        }
+    border-bottom: 1px solid #777777;
 
+    padding-bottom: 13px;
 
-        /* MAIN */
+    transition:
+        color 0.3s ease;
+}
 
-        main {
+.enter span {
+    font-size: 20px;
 
-            max-width: 900px;
+    transition:
+        transform 0.3s ease;
+}
 
-            width: 100%;
+.enter:hover {
+    color: #aaaaaa;
+}
 
-            margin: 0 auto;
+.enter:hover span {
+    transform:
+        translateX(8px);
+}
 
-            padding:
-                90px 0 70px;
+.quote {
+    margin-top: 120px;
 
-        }
+    padding-top: 30px;
 
+    border-top: 1px solid #333333;
 
-        /* EYEBROW */
+    font-size: 20px;
 
-        .eyebrow {
+    font-style: italic;
 
-            font-family:
-                Arial, sans-serif;
+    color: #777777;
 
-            font-size: 10px;
+    opacity: 0;
 
-            letter-spacing: 5px;
+    animation:
+        fadeUp 1.2s ease 1.4s forwards;
+}
 
-            color: #777777;
+.about {
+    margin-top: 100px;
 
-            margin-bottom: 35px;
+    padding-top: 35px;
 
-            opacity: 0;
+    border-top: 1px solid #333333;
 
-            animation:
-                fadeUp 1s ease 0.3s forwards;
+    opacity: 0;
 
-        }
+    animation:
+        fadeUp 1.2s ease 1.7s forwards;
+}
 
+.about-label {
+    font-family: Arial, sans-serif;
 
-        /* TITLE */
+    font-size: 10px;
 
-        h1 {
+    letter-spacing: 5px;
 
-            font-size:
-                clamp(65px, 13vw, 150px);
+    color: #777777;
 
-            font-weight: normal;
+    margin-bottom: 35px;
+}
 
-            line-height: 0.85;
+.about h2 {
+    font-size:
+        clamp(42px, 7vw, 80px);
 
-            margin: 0;
+    line-height: 0.95;
 
-            letter-spacing: -5px;
+    font-weight: normal;
 
-            opacity: 0;
+    margin: 0;
 
-            animation:
-                fadeUp 1.2s ease 0.5s forwards;
+    letter-spacing: -2px;
+}
 
-        }
+.about p {
+    max-width: 650px;
 
+    margin-top: 40px;
 
-        /* DESCRIPTION */
+    font-size: 21px;
 
-        .description {
+    line-height: 1.6;
 
-            max-width: 620px;
+    color: #aaa7a1;
+}
 
-            margin-top: 45px;
+.signature {
+    margin-top: 55px;
 
-            font-size:
-                clamp(20px, 3vw, 28px);
+    font-family: Arial, sans-serif;
 
-            line-height: 1.5;
+    font-size: 11px;
 
-            color: #aaa7a1;
+    letter-spacing: 4px;
 
-            opacity: 0;
+    color: #888888;
+}
 
-            animation:
-                fadeUp 1.2s ease 0.8s forwards;
+.signature span {
+    display: block;
 
-        }
+    margin-top: 14px;
 
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-        /* ENTER BUTTON */
+    font-size: 16px;
 
-        .enter {
+    letter-spacing: 1px;
 
-            display: inline-flex;
+    font-style: italic;
 
-            align-items:
-                center;
+    color: #666666;
+}
 
-            gap: 25px;
+footer {
+    max-width: 900px;
 
-            margin-top: 60px;
+    width: 100%;
 
-            color: #f2f0eb;
+    margin: 0 auto;
 
-            text-decoration: none;
+    padding-top: 25px;
 
-            font-family:
-                Arial, sans-serif;
+    border-top: 1px solid #333333;
 
-            font-size: 10px;
+    display: flex;
 
-            letter-spacing: 5px;
+    justify-content: space-between;
 
-            border-bottom:
-                1px solid #777777;
+    font-family: Arial, sans-serif;
 
-            padding-bottom: 13px;
+    font-size: 9px;
 
-            opacity: 0;
+    letter-spacing: 3px;
 
-            animation:
-                fadeUp 1.2s ease 1.1s forwards;
+    color: #555555;
+}
 
-            transition:
-                color 0.3s ease;
+@media (max-width: 600px) {
 
-        }
+    .page {
+        padding: 30px 25px;
+    }
 
+    main {
+        padding-top: 75px;
+    }
 
-        .enter span {
+    h1 {
+        letter-spacing: -3px;
+    }
 
-            font-size: 20px;
+    .links {
+        flex-direction: column;
+        gap: 25px;
+        align-items: flex-start;
+    }
 
-            transition:
-                transform 0.3s ease;
+    .quote {
+        margin-top: 100px;
+    }
 
-        }
+    .about {
+        margin-top: 85px;
+    }
 
+    footer {
+        flex-direction: column;
+        gap: 15px;
+    }
 
-        .enter:hover {
+}
 
-            color: #aaaaaa;
-
-        }
-
-
-        .enter:hover span {
-
-            transform:
-                translateX(8px);
-
-        }
-
-
-        /* QUOTE */
-
-        .quote {
-
-            margin-top: 120px;
-
-            padding-top: 30px;
-
-            border-top:
-                1px solid #333333;
-
-            font-size: 20px;
-
-            font-style: italic;
-
-            color: #777777;
-
-            opacity: 0;
-
-            animation:
-                fadeUp 1.2s ease 1.4s forwards;
-
-        }
-
-
-        /* ABOUT */
-
-        .about {
-
-            margin-top: 100px;
-
-            padding-top: 35px;
-
-            border-top:
-                1px solid #333333;
-
-            opacity: 0;
-
-            animation:
-                fadeUp 1.2s ease 1.7s forwards;
-
-        }
-
-
-        .about-label {
-
-            font-family:
-                Arial, sans-serif;
-
-            font-size: 10px;
-
-            letter-spacing: 5px;
-
-            color: #777777;
-
-            margin-bottom: 35px;
-
-        }
-
-
-        .about h2 {
-
-            font-size:
-                clamp(42px, 7vw, 80px);
-
-            line-height: 0.95;
-
-            font-weight: normal;
-
-            margin: 0;
-
-            letter-spacing: -2px;
-
-        }
-
-
-        .about p {
-
-            max-width: 650px;
-
-            margin-top: 40px;
-
-            font-size: 21px;
-
-            line-height: 1.6;
-
-            color: #aaa7a1;
-
-        }
-
-
-        .signature {
-
-            margin-top: 55px;
-
-            font-family:
-                Arial, sans-serif;
-
-            font-size: 11px;
-
-            letter-spacing: 4px;
-
-            color: #888888;
-
-        }
-
-
-        .signature span {
-
-            display: block;
-
-            margin-top: 14px;
-
-            font-family:
-                Georgia,
-                "Times New Roman",
-                serif;
-
-            font-size: 16px;
-
-            letter-spacing: 1px;
-
-            font-style: italic;
-
-            color: #666666;
-
-        }
-
-
-        /* FOOTER */
-
-        footer {
-
-            max-width: 900px;
-
-            width: 100%;
-
-            margin: 0 auto;
-
-            padding-top: 25px;
-
-            border-top:
-                1px solid #333333;
-
-            display: flex;
-
-            justify-content:
-                space-between;
-
-            font-family:
-                Arial, sans-serif;
-
-            font-size: 9px;
-
-            letter-spacing: 3px;
-
-            color: #555555;
-
-        }
-
-
-        /* MOBILE */
-
-        @media (max-width: 600px) {
-
-            .page {
-
-                padding:
-                    30px 25px;
-
-            }
-
-
-            main {
-
-                padding-top: 75px;
-
-            }
-
-
-            h1 {
-
-                letter-spacing: -3px;
-
-            }
-
-
-            .quote {
-
-                margin-top: 100px;
-
-            }
-
-
-            .about {
-
-                margin-top: 85px;
-
-            }
-
-
-            footer {
-
-                flex-direction:
-                    column;
-
-                gap: 15px;
-
-            }
-
-        }
-
-    </style>
+</style>
 
 </head>
 
@@ -498,136 +358,144 @@
 <div class="page">
 
 
-    <header>
+<header>
 
-        <div>
-            MUHAMMED.R
-        </div>
+<div>
+MUHAMMED.R
+</div>
 
-        <div class="number">
-            00 — 01
-        </div>
+<div class="number">
+00 — 01
+</div>
 
-    </header>
+</header>
 
 
-    <main>
+<main>
 
 
-        <div class="eyebrow">
+<div class="eyebrow">
+MUSIC · POETRY · PHOTOGRAPHY
+</div>
 
-            MUSIC · POETRY · PHOTOGRAPHY
 
-        </div>
+<h1>
+Muhammed.R
+</h1>
 
 
-        <h1>
+<div class="description">
 
-            Muhammed.R
+Words I never said out loud.
 
-        </h1>
+<br>
 
+A collection of music,
+thoughts and memories.
 
-        <div class="description">
+</div>
 
-            Words I never said out loud.
 
-            <br>
+<div class="links">
 
-            A collection of music,
-            thoughts and memories.
 
-        </div>
+<a
+    href="poetry.html"
+    class="enter"
+    id="enterWorld"
+>
 
+ENTER MY WORLD
 
-        <a
-            href="poetry.html"
-            class="enter"
-            id="enterWorld"
-        >
+<span>
+→
+</span>
 
-            ENTER MY WORLD
+</a>
 
-            <span>
-                →
-            </span>
 
-        </a>
+<a
+    href="archive.html"
+    class="enter"
+>
 
+THE ARCHIVE
 
-        <div class="quote">
+<span>
+→
+</span>
 
-            “Some things are better felt
-            than explained.”
+</a>
 
-        </div>
 
+</div>
 
-        <section class="about">
 
+<div class="quote">
 
-            <div class="about-label">
+“Some things are better felt
+than explained.”
 
-                ABOUT ME
+</div>
 
-            </div>
 
+<section class="about">
 
-            <h2>
 
-                I collect moments,
-                <br>
-                not things.
+<div class="about-label">
+ABOUT ME
+</div>
 
-            </h2>
 
+<h2>
 
-            <p>
+I collect moments,
+<br>
+not things.
 
-                Music, words, photographs —
-                fragments of a life that deserves
-                to be remembered.
+</h2>
 
-            </p>
 
+<p>
 
-            <div class="signature">
+Music, words, photographs —
+fragments of a life that deserves
+to be remembered.
 
-                MUHAMMED.R
+</p>
 
-                <span>
 
-                    Between silence and sound.
+<div class="signature">
 
-                </span>
+MUHAMMED.R
 
-            </div>
+<span>
+Between silence and sound.
+</span>
 
+</div>
 
-        </section>
 
+</section>
 
-    </main>
 
+</main>
 
-    <footer>
 
+<footer>
 
-        <div>
 
-            PERSONAL ARCHIVE
+<div>
+PERSONAL ARCHIVE
+</div>
 
-        </div>
 
+<div>
+© 2026 MUHAMMED.R
+</div>
 
-        <div>
 
-            © 2026 MUHAMMED.R
-
-        </div>
-
-
-    </footer>
+</footer>
 
 
 </div>
@@ -635,34 +503,31 @@
 
 <script>
 
-    const enterWorld =
-        document.getElementById("enterWorld");
+const enterWorld =
+    document.getElementById("enterWorld");
 
+enterWorld.addEventListener(
+    "click",
+    function(event) {
 
-    enterWorld.addEventListener(
-        "click",
-        function(event) {
+        event.preventDefault();
 
-            event.preventDefault();
+        document.body.classList.add(
+            "leaving"
+        );
 
+        setTimeout(
+            function() {
 
-            document.body.classList.add(
-                "leaving"
-            );
+                window.location.href =
+                    "poetry.html";
 
+            },
+            500
+        );
 
-            setTimeout(
-                function() {
-
-                    window.location.href =
-                        "poetry.html";
-
-                },
-                500
-            );
-
-        }
-    );
+    }
+);
 
 </script>
 
