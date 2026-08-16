@@ -20,7 +20,7 @@
 
         .page {
             min-height: 100vh;
-            padding: 35px 25px;
+            padding: 32px 25px;
             display: flex;
             flex-direction: column;
         }
@@ -30,9 +30,11 @@
             justify-content: space-between;
             align-items: center;
             font-family: Arial, sans-serif;
-            font-size: 11px;
+            font-size: 10px;
             letter-spacing: 4px;
             color: #888888;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #333333;
         }
 
         .number {
@@ -40,21 +42,17 @@
         }
 
         main {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
             max-width: 900px;
             width: 100%;
             margin: 0 auto;
-            padding: 80px 0;
+            padding: 90px 0 70px;
         }
 
         .eyebrow {
             font-family: Arial, sans-serif;
-            font-size: 11px;
+            font-size: 10px;
             letter-spacing: 5px;
-            color: #888888;
+            color: #777777;
             margin-bottom: 35px;
         }
 
@@ -68,58 +66,99 @@
 
         .description {
             max-width: 620px;
-            margin-top: 50px;
+            margin-top: 45px;
             font-size: clamp(20px, 3vw, 28px);
             line-height: 1.5;
-            color: #bdbab4;
+            color: #aaa7a1;
         }
 
         .enter {
             display: inline-flex;
             align-items: center;
             gap: 25px;
-            margin-top: 65px;
-            width: fit-content;
+            margin-top: 60px;
             color: #f2f0eb;
             text-decoration: none;
             font-family: Arial, sans-serif;
-            font-size: 11px;
-            letter-spacing: 4px;
+            font-size: 10px;
+            letter-spacing: 5px;
             border-bottom: 1px solid #777777;
-            padding-bottom: 12px;
-            transition: 0.3s;
+            padding-bottom: 13px;
         }
 
         .enter span {
             font-size: 20px;
-            transition: 0.3s;
-        }
-
-        .enter:hover {
-            color: #aaaaaa;
-        }
-
-        .enter:hover span {
-            transform: translateX(8px);
         }
 
         .quote {
-            margin-top: 100px;
-            padding-top: 25px;
+            margin-top: 120px;
+            padding-top: 30px;
             border-top: 1px solid #333333;
-            font-size: 16px;
+            font-size: 20px;
             font-style: italic;
             color: #777777;
         }
 
+        .about {
+            margin-top: 100px;
+            padding-top: 35px;
+            border-top: 1px solid #333333;
+        }
+
+        .about-label {
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 5px;
+            color: #777777;
+            margin-bottom: 35px;
+        }
+
+        .about h2 {
+            font-size: clamp(42px, 7vw, 80px);
+            line-height: 0.95;
+            font-weight: normal;
+            margin: 0;
+            letter-spacing: -2px;
+        }
+
+        .about p {
+            max-width: 650px;
+            margin-top: 40px;
+            font-size: 21px;
+            line-height: 1.6;
+            color: #aaa7a1;
+        }
+
+        .signature {
+            margin-top: 55px;
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            letter-spacing: 4px;
+            color: #888888;
+        }
+
+        .signature span {
+            display: block;
+            margin-top: 14px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 16px;
+            letter-spacing: 1px;
+            font-style: italic;
+            color: #666666;
+        }
+
         footer {
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+            padding-top: 25px;
+            border-top: 1px solid #333333;
             display: flex;
             justify-content: space-between;
             font-family: Arial, sans-serif;
             font-size: 9px;
             letter-spacing: 3px;
             color: #555555;
-            padding-top: 25px;
         }
 
         @media (max-width: 600px) {
@@ -127,17 +166,25 @@
                 padding: 30px 25px;
             }
 
+            main {
+                padding-top: 75px;
+            }
+
             h1 {
                 letter-spacing: -3px;
             }
 
-            main {
-                padding: 60px 0;
+            .quote {
+                margin-top: 100px;
+            }
+
+            .about {
+                margin-top: 85px;
             }
 
             footer {
                 flex-direction: column;
-                gap: 12px;
+                gap: 15px;
             }
         }
     </style>
@@ -165,8 +212,7 @@
         <div class="description">
             Words I never said out loud.
             <br>
-            A collection of music, thoughts
-            and memories.
+            A collection of music, thoughts and memories.
         </div>
 
         <a href="poetry.html" class="enter">
@@ -176,28 +222,31 @@
 
         <div class="quote">
             “Some things are better felt than explained.”
-        </div>     <div class="quote">
-        “Some things are better felt than explained.”
-    </div>
-
-    <section class="about">
-        <div class="about-label">ABOUT ME</div>
-
-        <h2>I collect moments,<br>not things.</h2>
-
-        <p>
-            Music, words, photographs —
-            fragments of a life that deserves
-            to be remembered.
-        </p>
-
-        <div class="about-signature">
-            MUHAMMED.R<br>
-            <span>Between silence and sound.</span>
         </div>
-    </section>
 
-</main>
+        <section class="about">
+
+            <div class="about-label">
+                ABOUT ME
+            </div>
+
+            <h2>
+                I collect moments,<br>
+                not things.
+            </h2>
+
+            <p>
+                Music, words, photographs —
+                fragments of a life that deserves
+                to be remembered.
+            </p>
+
+            <div class="signature">
+                MUHAMMED.R
+                <span>Between silence and sound.</span>
+            </div>
+
+        </section>
 
     </main>
 
