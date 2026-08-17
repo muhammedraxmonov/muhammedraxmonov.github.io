@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Muhammed.R — Leave a Trace</title>
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Muhammed.R — Guestbook</title>
 
 <style>
+
 * {
     box-sizing: border-box;
 }
@@ -18,197 +23,297 @@ html {
 body {
     margin: 0;
     background: #111111;
-    color: #eeeeee;
-    font-family: "Courier New", monospace;
+    color: #f2f0eb;
+    font-family: Georgia, "Times New Roman", serif;
 }
 
 .page {
-    width: min(900px, 92%);
-    margin: 0 auto;
-    padding: 70px 0;
+    min-height: 100vh;
+    padding: 32px 25px;
 }
 
 /* HEADER */
 
-.header {
-    text-align: center;
-    margin-bottom: 70px;
+header {
+    max-width: 900px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid #333333;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+
+    color: #777777;
 }
 
-.header h1 {
-    margin: 0;
-    font-size: clamp(40px, 8vw, 76px);
-    font-weight: 400;
-    letter-spacing: 5px;
+header a {
+    color: #777777;
+    text-decoration: none;
 }
 
-.header p {
-    margin-top: 18px;
-    color: #888888;
-    font-size: 14px;
-    letter-spacing: 2px;
+header a:hover {
+    color: #f2f0eb;
+}
+
+/* MAIN */
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 /* INTRO */
 
 .intro {
-    text-align: center;
-    margin-bottom: 55px;
+    padding: 100px 0 80px;
 }
 
-.intro h2 {
-    font-size: 20px;
-    font-weight: 400;
-    letter-spacing: 3px;
+.label {
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 5px;
+    color: #777777;
+    margin-bottom: 35px;
 }
 
-.intro p {
-    color: #888888;
-    line-height: 1.8;
+h1 {
+    margin: 0;
+
+    font-size: clamp(60px, 12vw, 140px);
+    font-weight: normal;
+    line-height: 0.85;
+    letter-spacing: -5px;
+}
+
+.intro-text {
+    max-width: 600px;
+
+    margin-top: 45px;
+
+    font-size: clamp(20px, 3vw, 28px);
+    line-height: 1.5;
+
+    color: #aaa7a1;
 }
 
 /* FORM */
 
 .form {
     border: 1px solid #333333;
-    padding: 30px;
-    margin-bottom: 70px;
+    padding: 45px;
 }
 
 .field {
-    margin-bottom: 25px;
+    margin-bottom: 35px;
 }
 
-.field label {
+label {
     display: block;
-    margin-bottom: 10px;
-    color: #aaaaaa;
-    font-size: 12px;
-    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+
+    color: #777777;
 }
 
 input,
 textarea {
     width: 100%;
-    border: 1px solid #333333;
+
+    border: 1px solid #444444;
+
     background: #171717;
-    color: #eeeeee;
-    padding: 15px;
-    font-family: inherit;
-    font-size: 15px;
+    color: #f2f0eb;
+
+    padding: 20px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+
     outline: none;
+
+    transition:
+        border-color 0.3s ease,
+        background 0.3s ease;
 }
 
 input:focus,
 textarea:focus {
-    border-color: #777777;
+    border-color: #888888;
+    background: #191919;
 }
 
 textarea {
-    min-height: 150px;
+    min-height: 220px;
     resize: vertical;
 }
 
+input::placeholder,
+textarea::placeholder {
+    color: #555555;
+}
+
+/* BUTTON */
+
 button {
     width: 100%;
-    padding: 16px;
-    background: #eeeeee;
+
+    padding: 22px;
+
+    border: 1px solid #777777;
+
+    background: #f2f0eb;
     color: #111111;
-    border: none;
-    font-family: inherit;
-    font-size: 14px;
-    letter-spacing: 2px;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 5px;
+
     cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
 }
 
 button:hover {
-    background: #cccccc;
+    background: #111111;
+    color: #f2f0eb;
 }
 
 button:disabled {
     opacity: 0.5;
-    cursor: not-allowed;
+    cursor: wait;
 }
+
+/* STATUS */
 
 #status {
-    text-align: center;
-    margin-top: 18px;
     min-height: 20px;
-    color: #888888;
-    font-size: 12px;
-    letter-spacing: 1px;
+
+    margin-top: 20px;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+
+    color: #777777;
+
+    text-align: center;
 }
 
-/* REVIEWS */
+/* TRACES */
 
-.reviews-title {
+.traces {
+    margin-top: 120px;
+}
+
+.traces-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    padding-bottom: 30px;
+
     border-bottom: 1px solid #333333;
-    padding-bottom: 15px;
-    margin-bottom: 25px;
 }
 
-.reviews-title h2 {
-    font-size: 18px;
-    font-weight: 400;
+.traces-title {
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 5px;
+    color: #777777;
+}
+
+#count {
+    font-family: Arial, sans-serif;
+    font-size: 10px;
     letter-spacing: 3px;
-    margin: 0;
+    color: #555555;
 }
 
-#reviewCount {
-    color: #666666;
-    font-size: 12px;
+/* REVIEW */
+
+#reviews {
+    margin-top: 10px;
 }
 
 .review {
-    border-bottom: 1px solid #292929;
-    padding: 25px 0;
+    padding: 50px 0;
+
+    border-bottom: 1px solid #333333;
+}
+
+.review-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .review-name {
-    color: #eeeeee;
-    font-size: 14px;
-    margin-bottom: 10px;
-    letter-spacing: 1px;
+    font-size: 20px;
+    color: #aaa7a1;
 }
 
 .review-date {
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 2px;
     color: #555555;
-    font-size: 11px;
-    margin-bottom: 15px;
+    white-space: nowrap;
 }
 
 .review-message {
-    color: #bbbbbb;
-    line-height: 1.8;
-    white-space: pre-wrap;
-    word-break: break-word;
+    max-width: 700px;
+
+    margin-top: 35px;
+
+    font-size: 26px;
+    line-height: 1.5;
+
+    color: #aaa7a1;
 }
+
+/* EMPTY */
 
 .empty {
-    color: #555555;
-    text-align: center;
-    padding: 40px 0;
-}
+    padding: 60px 0;
 
-.loading {
-    color: #666666;
-    text-align: center;
-    padding: 30px 0;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+
+    color: #555555;
 }
 
 /* FOOTER */
 
 footer {
-    text-align: center;
-    margin-top: 90px;
+    max-width: 900px;
+    margin: 100px auto 0;
+
     padding-top: 25px;
-    border-top: 1px solid #222222;
+
+    border-top: 1px solid #333333;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+
     color: #555555;
-    font-size: 11px;
-    letter-spacing: 2px;
 }
 
 /* MOBILE */
@@ -216,130 +321,189 @@ footer {
 @media (max-width: 600px) {
 
     .page {
-        padding: 45px 0;
-    }
-
-    .form {
-        padding: 20px;
-    }
-
-    .header {
-        margin-bottom: 50px;
+        padding: 30px 25px;
     }
 
     .intro {
-        margin-bottom: 40px;
+        padding: 75px 0 60px;
     }
+
+    h1 {
+        letter-spacing: -3px;
+    }
+
+    .form {
+        padding: 25px;
+    }
+
+    .review-top {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .review-message {
+        font-size: 21px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 15px;
+    }
+
 }
+
 </style>
+
 </head>
+
 
 <body>
 
 <div class="page">
 
-    <!-- HEADER -->
 
-    <header class="header">
-        <h1>MUHAMMED.R</h1>
-        <p>PERSONAL ARCHIVE · LEAVE A TRACE</p>
-    </header>
+<header>
 
+<a href="index.html">
+MUHAMMED.R
+</a>
 
-    <!-- INTRO -->
+<div>
+GUESTBOOK · 02
+</div>
 
-    <section class="intro">
-        <h2>A SPACE FOR A THOUGHT</h2>
-
-        <p>
-            Leave a thought,<br>
-            a feeling, or simply<br>
-            a few words.
-        </p>
-    </section>
+</header>
 
 
-    <!-- FORM -->
-
-    <div class="form">
-
-        <div class="field">
-            <label>NAME · OPTIONAL</label>
-
-            <input
-                id="name"
-                type="text"
-                placeholder="Anonymous"
-                maxlength="40"
-                autocomplete="off"
-            >
-        </div>
+<main>
 
 
-        <div class="field">
-            <label>YOUR MESSAGE</label>
+<section class="intro">
 
-            <textarea
-                id="message"
-                placeholder="What did you feel here?"
-                maxlength="300"
-            ></textarea>
-        </div>
+<div class="label">
+LEAVE SOMETHING BEHIND
+</div>
 
+<h1>
+Traces.
+</h1>
 
-        <button
-            id="sendButton"
-            onclick="sendMessage()"
-        >
-            LEAVE MESSAGE
-        </button>
+<div class="intro-text">
 
-        <div id="status"></div>
+A thought.
+A feeling.
+A few words.
 
-    </div>
+Leave something here
+for the next version of me.
 
+</div>
 
-    <!-- REVIEWS -->
-
-    <section>
-
-        <div class="reviews-title">
-
-            <h2>TRACES</h2>
-
-            <span id="reviewCount">
-                0
-            </span>
-
-        </div>
-
-        <div id="reviews">
-
-            <div class="loading">
-                LOADING...
-            </div>
-
-        </div>
-
-    </section>
+</section>
 
 
-    <!-- FOOTER -->
+<section class="form">
 
-    <footer>
-        PERSONAL ARCHIVE · MUHAMMED.R
-    </footer>
+
+<div class="field">
+
+<label>
+NAME · OPTIONAL
+</label>
+
+<input
+type="text"
+id="name"
+placeholder="Anonymous"
+maxlength="40"
+>
+
+</div>
+
+
+<div class="field">
+
+<label>
+YOUR MESSAGE
+</label>
+
+<textarea
+id="message"
+placeholder="What did you feel here?"
+maxlength="300"
+></textarea>
+
+</div>
+
+
+<button
+id="submitButton"
+onclick="sendMessage()"
+>
+
+LEAVE MESSAGE
+
+</button>
+
+
+<div id="status"></div>
+
+
+</section>
+
+
+<section class="traces">
+
+
+<div class="traces-header">
+
+<div class="traces-title">
+TRACES
+</div>
+
+<div id="count">
+0
+</div>
+
+</div>
+
+
+<div id="reviews">
+
+<div class="empty">
+LOADING...
+</div>
+
+</div>
+
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+<div>
+PERSONAL ARCHIVE
+</div>
+
+<div>
+© 2026 MUHAMMED.R
+</div>
+
+</footer>
+
 
 </div>
 
 
 <script>
 
-/*
-====================================================
-SUPABASE CONFIGURATION
-====================================================
-*/
+/* =========================================
+   SUPABASE
+========================================= */
 
 const SUPABASE_URL =
     "https://dixbzkpjugntycfnfwze.supabase.co";
@@ -348,48 +512,45 @@ const SUPABASE_KEY =
     "sb_publishable_w5dES3PoPGIG9iGatAJDnw_A0vJu_wb";
 
 
-/*
-====================================================
-LOAD REVIEWS
-====================================================
-*/
+/* =========================================
+   LOAD REVIEWS
+========================================= */
 
 async function loadReviews() {
 
-    const reviewsContainer =
+    const reviewsBox =
         document.getElementById("reviews");
 
     const count =
-        document.getElementById("reviewCount");
+        document.getElementById("count");
 
     try {
 
-        const response = await fetch(
-            SUPABASE_URL +
-            "/rest/v1/reviews?select=*&order=created_at.desc",
-            {
-                method: "GET",
+        const response =
+            await fetch(
+                SUPABASE_URL +
+                "/rest/v1/reviews" +
+                "?select=id,name,message,created_at" +
+                "&order=created_at.desc",
+                {
+                    method: "GET",
 
-                headers: {
-                    "apikey": SUPABASE_KEY,
-                    "Authorization":
-                        "Bearer " + SUPABASE_KEY
+                    headers: {
+                        "apikey": SUPABASE_KEY,
+                        "Authorization":
+                            "Bearer " +
+                            SUPABASE_KEY
+                    }
                 }
-            }
-        );
+            );
 
 
         if (!response.ok) {
 
-            const error =
-                await response.text();
+            throw new Error(
+                "Could not load messages."
+            );
 
-            console.error(error);
-
-            reviewsContainer.innerHTML =
-                '<div class="empty">COULD NOT LOAD MESSAGES.</div>';
-
-            return;
         }
 
 
@@ -403,92 +564,123 @@ async function loadReviews() {
 
         if (reviews.length === 0) {
 
-            reviewsContainer.innerHTML =
-                '<div class="empty">NO TRACES YET.</div>';
+            reviewsBox.innerHTML =
+                `
+                <div class="empty">
+                    NO TRACES YET.
+                </div>
+                `;
 
             return;
+
         }
 
 
-        reviewsContainer.innerHTML = "";
+        reviewsBox.innerHTML = "";
 
 
-        reviews.forEach(review => {
+        reviews.forEach(
+            function(review) {
 
-            const reviewElement =
-                document.createElement("div");
+                const article =
+                    document.createElement("article");
 
-            reviewElement.className =
-                "review";
-
-
-            const name =
-                review.name ||
-                "Anonymous";
+                article.className =
+                    "review";
 
 
-            const message =
-                review.message ||
-                "";
+                const top =
+                    document.createElement("div");
+
+                top.className =
+                    "review-top";
 
 
-            let date = "";
+                const name =
+                    document.createElement("div");
 
-            if (review.created_at) {
+                name.className =
+                    "review-name";
 
-                date =
-                    new Date(
-                        review.created_at
-                    ).toLocaleString(
-                        "en-US",
-                        {
-                            year: "numeric",
-                            month: "short",
-                            day: "numeric"
-                        }
-                    );
+                name.textContent =
+                    review.name ||
+                    "Anonymous";
+
+
+                const date =
+                    document.createElement("div");
+
+                date.className =
+                    "review-date";
+
+
+                if (review.created_at) {
+
+                    const d =
+                        new Date(
+                            review.created_at
+                        );
+
+                    date.textContent =
+                        d.toLocaleDateString(
+                            "en-US",
+                            {
+                                month: "short",
+                                day: "2-digit",
+                                year: "numeric"
+                            }
+                        );
+
+                }
+
+
+                const message =
+                    document.createElement("div");
+
+                message.className =
+                    "review-message";
+
+                message.textContent =
+                    review.message;
+
+
+                top.appendChild(name);
+
+                top.appendChild(date);
+
+
+                article.appendChild(top);
+
+                article.appendChild(message);
+
+
+                reviewsBox.appendChild(article);
+
             }
+        );
 
 
-            reviewElement.innerHTML = `
+    }
 
-                <div class="review-name">
-                    ${escapeHTML(name)}
-                </div>
-
-                <div class="review-date">
-                    ${escapeHTML(date)}
-                </div>
-
-                <div class="review-message">
-                    ${escapeHTML(message)}
-                </div>
-
-            `;
-
-
-            reviewsContainer.appendChild(
-                reviewElement
-            );
-
-        });
-
-
-    } catch (error) {
+    catch (error) {
 
         console.error(error);
 
-        reviewsContainer.innerHTML =
-            '<div class="empty">CONNECTION ERROR.</div>';
+        reviewsBox.innerHTML =
+            `
+            <div class="empty">
+                COULD NOT LOAD TRACES.
+            </div>
+            `;
+
     }
+
 }
 
 
-/*
-====================================================
-SEND MESSAGE
-====================================================
-*/
+/* =========================================
+   SEND MESSAGE
+========================================= */
 
 async function sendMessage() {
 
@@ -502,11 +694,12 @@ async function sendMessage() {
         document.getElementById("status");
 
     const button =
-        document.getElementById("sendButton");
+        document.getElementById("submitButton");
 
 
     const name =
-        nameInput.value.trim();
+        nameInput.value.trim() ||
+        "Anonymous";
 
     const message =
         messageInput.value.trim();
@@ -517,9 +710,8 @@ async function sendMessage() {
         status.textContent =
             "WRITE SOMETHING FIRST.";
 
-        messageInput.focus();
-
         return;
+
     }
 
 
@@ -528,7 +720,8 @@ async function sendMessage() {
     button.textContent =
         "SENDING...";
 
-    status.textContent = "";
+    status.textContent =
+        "";
 
 
     try {
@@ -555,14 +748,8 @@ async function sendMessage() {
                     },
 
                     body: JSON.stringify({
-
-                        name:
-                            name ||
-                            "Anonymous",
-
-                        message:
-                            message
-
+                        name: name,
+                        message: message
                     })
                 }
             );
@@ -570,31 +757,19 @@ async function sendMessage() {
 
         if (!response.ok) {
 
-            const error =
+            const errorText =
                 await response.text();
 
             console.error(
-                "Supabase error:",
-                error
+                errorText
             );
 
-            status.textContent =
-                "ERROR: MESSAGE NOT SENT.";
+            throw new Error(
+                "Message was not saved."
+            );
 
-            button.disabled = false;
-
-            button.textContent =
-                "LEAVE MESSAGE";
-
-            return;
         }
 
-
-        /*
-        ============================================
-        SUCCESS
-        ============================================
-        */
 
         status.textContent =
             "MESSAGE RECEIVED.";
@@ -605,61 +780,38 @@ async function sendMessage() {
         messageInput.value = "";
 
 
-        button.disabled = false;
-
-        button.textContent =
-            "LEAVE MESSAGE";
-
-
-        /*
-        Reload reviews
-        */
-
         await loadReviews();
 
 
-    } catch (error) {
+    }
+
+    catch (error) {
 
         console.error(error);
 
         status.textContent =
-            "CONNECTION ERROR.";
+            "SOMETHING WENT WRONG.";
 
-        button.disabled = false;
-
-        button.textContent =
-            "LEAVE MESSAGE";
     }
+
+
+    button.disabled = false;
+
+    button.textContent =
+        "LEAVE MESSAGE";
+
 }
 
 
-/*
-====================================================
-SECURITY
-====================================================
-*/
-
-function escapeHTML(text) {
-
-    const div =
-        document.createElement("div");
-
-    div.textContent =
-        text;
-
-    return div.innerHTML;
-}
-
-
-/*
-====================================================
-START
-====================================================
-*/
+/* =========================================
+   START
+========================================= */
 
 loadReviews();
 
 </script>
 
+
 </body>
+
 </html>
