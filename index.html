@@ -29,36 +29,43 @@ body.leaving {
 }
 
 
-/* CUSTOM CURSOR */
+/* PAGE */
 
-.cursor {
-    position: fixed;
-    width: 14px;
-    height: 14px;
-    border: 1px solid #777777;
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9999;
+.page {
+    min-height: 100vh;
+    padding: 32px 25px;
 
-    transform:
-        translate(-50%, -50%);
-
-    transition:
-        width 0.3s ease,
-        height 0.3s ease,
-        border-color 0.3s ease;
-
-    display: none;
-}
-
-.cursor.active {
-    width: 45px;
-    height: 45px;
-    border-color: #aaaaaa;
+    display: flex;
+    flex-direction: column;
 }
 
 
-/* INTRO */
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid #333333;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+
+    color: #888888;
+
+    animation: fadeUp 1s ease forwards;
+}
+
+.number {
+    color: #555555;
+}
+
+
+/* ANIMATION */
 
 @keyframes fadeUp {
 
@@ -75,60 +82,15 @@ body.leaving {
 }
 
 
-/* PAGE */
-
-.page {
-    min-height: 100vh;
-
-    padding: 32px 25px;
-
-    display: flex;
-    flex-direction: column;
-}
-
-
-/* HEADER */
-
-header {
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    padding-bottom: 25px;
-
-    border-bottom:
-        1px solid #333333;
-
-    font-family: Arial, sans-serif;
-
-    font-size: 10px;
-
-    letter-spacing: 4px;
-
-    color: #888888;
-
-    animation:
-        fadeUp 1s ease forwards;
-}
-
-.number {
-    color: #555555;
-}
-
-
 /* MAIN */
 
 main {
     max-width: 900px;
-
     width: 100%;
 
     margin: 0 auto;
 
-    padding:
-        90px 0 70px;
+    padding: 90px 0 70px;
 }
 
 
@@ -138,7 +100,6 @@ main {
     font-family: Arial, sans-serif;
 
     font-size: 10px;
-
     letter-spacing: 5px;
 
     color: #777777;
@@ -192,9 +153,6 @@ h1 {
 
     animation:
         fadeUp 1s ease 0.7s forwards;
-
-    transition:
-        opacity 0.5s ease;
 }
 
 .memory strong {
@@ -225,6 +183,91 @@ h1 {
 }
 
 
+/* VIDEO SECTION */
+
+.video-section {
+    margin-top: 90px;
+
+    opacity: 0;
+
+    animation:
+        fadeUp 1.2s ease 1s forwards;
+}
+
+.video-label {
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 5px;
+
+    color: #777777;
+
+    margin-bottom: 25px;
+}
+
+
+/* VIDEO */
+
+.video-frame {
+    width: 100%;
+
+    background: #090909;
+
+    border: 1px solid #333333;
+
+    overflow: hidden;
+}
+
+.video-frame video {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    background: #090909;
+}
+
+
+/* VIDEO QUOTE */
+
+.video-quote {
+    max-width: 700px;
+
+    margin-top: 35px;
+
+    padding-left: 25px;
+
+    border-left: 1px solid #555555;
+
+    font-size:
+        clamp(20px, 3vw, 27px);
+
+    line-height: 1.5;
+
+    font-style: italic;
+
+    color: #aaa7a1;
+}
+
+.video-caption {
+    margin-top: 22px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    color: #555555;
+}
+
+
 /* LINKS */
 
 .links {
@@ -234,12 +277,12 @@ h1 {
 
     gap: 35px;
 
-    margin-top: 60px;
+    margin-top: 70px;
 
     opacity: 0;
 
     animation:
-        fadeUp 1.2s ease 1.1s forwards;
+        fadeUp 1.2s ease 1.2s forwards;
 }
 
 
@@ -530,6 +573,16 @@ footer {
         letter-spacing: -3px;
     }
 
+    .video-section {
+        margin-top: 70px;
+    }
+
+    .video-quote {
+        padding-left: 18px;
+
+        font-size: 20px;
+    }
+
     .links {
         flex-direction: column;
 
@@ -563,12 +616,6 @@ footer {
 <body>
 
 
-<div
-class="cursor"
-id="cursor"
-></div>
-
-
 <div class="page">
 
 
@@ -589,16 +636,12 @@ MUHAMMED.R
 
 
 <div class="eyebrow">
-
 MUSIC · POETRY · PHOTOGRAPHY
-
 </div>
 
 
 <h1>
-
 Muhammed.R
-
 </h1>
 
 
@@ -606,9 +649,7 @@ Muhammed.R
 class="memory"
 id="memory"
 >
-
 THE SITE REMEMBERS
-
 </div>
 
 
@@ -623,6 +664,55 @@ thoughts and memories.
 
 </div>
 
+
+<!-- VIDEO -->
+
+<section class="video-section">
+
+
+<div class="video-label">
+A MOMENT I KEPT · 01
+</div>
+
+
+<div class="video-frame">
+
+<video
+controls
+playsinline
+preload="metadata"
+>
+
+<source
+src="6569202398630419723.mp4"
+type="video/mp4"
+>
+
+Your browser does not support video.
+
+</video>
+
+</div>
+
+
+<div class="video-quote">
+
+“Some moments ask for nothing —
+only a quiet room, a warm light,
+and time to stay.”
+
+</div>
+
+
+<div class="video-caption">
+A SMALL MEMORY · KEPT HERE
+</div>
+
+
+</section>
+
+
+<!-- LINKS -->
 
 <div class="links">
 
@@ -673,6 +763,8 @@ GUESTBOOK
 </div>
 
 
+<!-- STATUS -->
+
 <div class="status">
 
 <div class="dot"></div>
@@ -692,6 +784,8 @@ id="clock"
 </div>
 
 
+<!-- QUOTE -->
+
 <div class="quote">
 
 “Some things are better felt
@@ -700,13 +794,13 @@ than explained.”
 </div>
 
 
+<!-- ABOUT -->
+
 <section class="about">
 
 
 <div class="about-label">
-
 ABOUT ME
-
 </div>
 
 
@@ -735,9 +829,7 @@ to be remembered.
 MUHAMMED.R
 
 <span>
-
 Between silence and sound.
-
 </span>
 
 </div>
@@ -768,7 +860,9 @@ PERSONAL ARCHIVE
 <script>
 
 
-/* POETRY TRANSITION */
+/* =========================================
+   POETRY TRANSITION
+========================================= */
 
 const enterWorld =
 document.getElementById(
@@ -800,31 +894,38 @@ function(event) {
 );
 
 
-/* LIVE CLOCK */
+/* =========================================
+   LIVE CLOCK
+========================================= */
 
 function updateClock() {
 
     const now =
         new Date();
 
+
     const hours =
         String(
             now.getHours()
         ).padStart(2, "0");
+
 
     const minutes =
         String(
             now.getMinutes()
         ).padStart(2, "0");
 
+
     const seconds =
         String(
             now.getSeconds()
         ).padStart(2, "0");
 
+
     document.getElementById(
         "clock"
     ).textContent =
+
         hours +
         ":" +
         minutes +
@@ -833,7 +934,9 @@ function updateClock() {
 
 }
 
+
 updateClock();
+
 
 setInterval(
     updateClock,
@@ -841,7 +944,9 @@ setInterval(
 );
 
 
-/* SCROLL REVEAL */
+/* =========================================
+   SCROLL REVEAL
+========================================= */
 
 const revealItems =
 document.querySelectorAll(
@@ -884,108 +989,16 @@ new IntersectionObserver(
 revealItems.forEach(
 (item) => {
 
-    revealObserver.observe(item);
-
-});
-
-
-/* CUSTOM CURSOR */
-
-const cursor =
-document.getElementById(
-    "cursor"
-);
-
-
-let mouseX = 0;
-let mouseY = 0;
-
-let cursorX = 0;
-let cursorY = 0;
-
-
-document.addEventListener(
-"mousemove",
-function(event) {
-
-    mouseX = event.clientX;
-    mouseY = event.clientY;
-
-});
-
-
-function moveCursor() {
-
-    cursorX +=
-        (mouseX - cursorX) * 0.15;
-
-    cursorY +=
-        (mouseY - cursorY) * 0.15;
-
-    cursor.style.left =
-        cursorX + "px";
-
-    cursor.style.top =
-        cursorY + "px";
-
-    requestAnimationFrame(
-        moveCursor
-    );
-
-}
-
-
-moveCursor();
-
-
-const hoverElements =
-document.querySelectorAll(
-    "a, .signature, h1"
-);
-
-
-hoverElements.forEach(
-(element) => {
-
-    element.addEventListener(
-        "mouseenter",
-        function() {
-
-            cursor.classList.add(
-                "active"
-            );
-
-        }
-    );
-
-
-    element.addEventListener(
-        "mouseleave",
-        function() {
-
-            cursor.classList.remove(
-                "active"
-            );
-
-        }
+    revealObserver.observe(
+        item
     );
 
 });
 
 
-if (
-    window.matchMedia(
-        "(pointer: fine)"
-    ).matches
-) {
-
-    cursor.style.display =
-        "block";
-
-}
-
-
-/* THE SITE REMEMBERS */
+/* =========================================
+   THE SITE REMEMBERS
+========================================= */
 
 const memory =
 document.getElementById(
@@ -1016,18 +1029,21 @@ if (visits === 1) {
         "FIRST VISIT. · <strong>I DON'T KNOW YOU YET.</strong>";
 
 }
+
 else if (visits === 2) {
 
     memory.innerHTML =
         "WELCOME BACK. · <strong>I REMEMBER YOU.</strong>";
 
 }
+
 else if (visits === 3) {
 
     memory.innerHTML =
         "YOU CAME BACK AGAIN. · <strong>I WAS EXPECTING YOU.</strong>";
 
 }
+
 else {
 
     memory.innerHTML =
@@ -1036,7 +1052,6 @@ else {
         ". · <strong>YOU KEEP COMING BACK.</strong>";
 
 }
-
 
 </script>
 
