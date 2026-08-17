@@ -10,7 +10,12 @@ content="width=device-width, initial-scale=1.0">
 
 <title>Muhammed.R — Guestbook</title>
 
+
 <style>
+
+/* =========================================
+   BASIC
+========================================= */
 
 * {
     box-sizing: border-box;
@@ -22,32 +27,59 @@ html {
 
 body {
     margin: 0;
+
     background: #111111;
+
     color: #f2f0eb;
-    font-family: Georgia, "Times New Roman", serif;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 }
+
+
+/* =========================================
+   PAGE
+========================================= */
 
 .page {
     min-height: 100vh;
-    padding: 32px 25px;
+
+    padding:
+        32px 25px;
 }
 
-/* HEADER */
+
+/* =========================================
+   HEADER
+========================================= */
 
 header {
     max-width: 900px;
+
     margin: 0 auto;
 
     display: flex;
-    justify-content: space-between;
-    align-items: center;
 
-    padding-bottom: 25px;
+    justify-content:
+        space-between;
 
-    border-bottom: 1px solid #333333;
+    align-items:
+        center;
 
-    font-family: Arial, sans-serif;
+    padding-bottom:
+        25px;
+
+    border-bottom:
+        1px solid #333333;
+
+    font-family:
+        Arial,
+        sans-serif;
+
     font-size: 10px;
+
     letter-spacing: 4px;
 
     color: #777777;
@@ -55,41 +87,70 @@ header {
 
 header a {
     color: #777777;
+
     text-decoration: none;
+
+    transition:
+        color 0.3s ease;
 }
 
 header a:hover {
     color: #f2f0eb;
 }
 
-/* MAIN */
+
+/* =========================================
+   MAIN
+========================================= */
 
 main {
     max-width: 900px;
+
     margin: 0 auto;
 }
 
-/* INTRO */
+
+/* =========================================
+   INTRO
+========================================= */
 
 .intro {
-    padding: 100px 0 80px;
+    padding:
+        100px 0 80px;
 }
 
 .label {
-    font-family: Arial, sans-serif;
+    font-family:
+        Arial,
+        sans-serif;
+
     font-size: 10px;
+
     letter-spacing: 5px;
+
     color: #777777;
+
     margin-bottom: 35px;
 }
 
 h1 {
     margin: 0;
 
-    font-size: clamp(60px, 12vw, 140px);
-    font-weight: normal;
-    line-height: 0.85;
-    letter-spacing: -5px;
+    font-size:
+        clamp(
+            60px,
+            12vw,
+            140px
+        );
+
+    font-weight:
+        normal;
+
+    line-height:
+        0.85;
+
+    letter-spacing:
+        -5px;
 }
 
 .intro-text {
@@ -97,16 +158,27 @@ h1 {
 
     margin-top: 45px;
 
-    font-size: clamp(20px, 3vw, 28px);
+    font-size:
+        clamp(
+            20px,
+            3vw,
+            28px
+        );
+
     line-height: 1.5;
 
     color: #aaa7a1;
 }
 
-/* FORM */
+
+/* =========================================
+   FORM
+========================================= */
 
 .form {
-    border: 1px solid #333333;
+    border:
+        1px solid #333333;
+
     padding: 45px;
 }
 
@@ -119,8 +191,12 @@ label {
 
     margin-bottom: 15px;
 
-    font-family: Arial, sans-serif;
+    font-family:
+        Arial,
+        sans-serif;
+
     font-size: 10px;
+
     letter-spacing: 4px;
 
     color: #777777;
@@ -130,14 +206,20 @@ input,
 textarea {
     width: 100%;
 
-    border: 1px solid #444444;
+    border:
+        1px solid #444444;
 
     background: #171717;
+
     color: #f2f0eb;
 
     padding: 20px;
 
-    font-family: Georgia, "Times New Roman", serif;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
     font-size: 18px;
 
     outline: none;
@@ -150,12 +232,8 @@ textarea {
 input:focus,
 textarea:focus {
     border-color: #888888;
-    background: #191919;
-}
 
-textarea {
-    min-height: 220px;
-    resize: vertical;
+    background: #191919;
 }
 
 input::placeholder,
@@ -163,48 +241,73 @@ textarea::placeholder {
     color: #555555;
 }
 
-/* BUTTON */
+textarea {
+    min-height: 220px;
+
+    resize: vertical;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
 
 button {
     width: 100%;
 
     padding: 22px;
 
-    border: 1px solid #777777;
+    border:
+        1px solid #777777;
 
     background: #f2f0eb;
+
     color: #111111;
 
-    font-family: Arial, sans-serif;
+    font-family:
+        Arial,
+        sans-serif;
+
     font-size: 10px;
+
     letter-spacing: 5px;
 
     cursor: pointer;
 
     transition:
         background 0.3s ease,
-        color 0.3s ease;
+        color 0.3s ease,
+        opacity 0.3s ease;
 }
 
 button:hover {
     background: #111111;
+
     color: #f2f0eb;
 }
 
 button:disabled {
     opacity: 0.5;
+
     cursor: wait;
 }
 
-/* STATUS */
+
+/* =========================================
+   STATUS
+========================================= */
 
 #status {
     min-height: 20px;
 
     margin-top: 20px;
 
-    font-family: Arial, sans-serif;
+    font-family:
+        Arial,
+        sans-serif;
+
     font-size: 10px;
+
     letter-spacing: 3px;
 
     color: #777777;
@@ -212,7 +315,64 @@ button:disabled {
     text-align: center;
 }
 
-/* TRACES */
+
+/* =========================================
+   HAPPY STICKER
+========================================= */
+
+.happy-sticker {
+    position: fixed;
+
+    left: 50%;
+
+    bottom: 35px;
+
+    transform:
+        translate(
+            -50%,
+            40px
+        )
+        rotate(-8deg);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 48px;
+
+    font-weight: bold;
+
+    color: #ffd84d;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    z-index: 9999;
+
+    text-shadow:
+        2px 2px 0 #111111;
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.6s ease;
+}
+
+.happy-sticker.show {
+    opacity: 1;
+
+    transform:
+        translate(
+            -50%,
+            0
+        )
+        rotate(5deg);
+}
+
+
+/* =========================================
+   TRACES
+========================================= */
 
 .traces {
     margin-top: 120px;
@@ -220,57 +380,104 @@ button:disabled {
 
 .traces-header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
 
     padding-bottom: 30px;
 
-    border-bottom: 1px solid #333333;
+    border-bottom:
+        1px solid #333333;
 }
 
 .traces-title {
-    font-family: Arial, sans-serif;
+    font-family:
+        Arial,
+        sans-serif;
+
     font-size: 10px;
+
     letter-spacing: 5px;
+
     color: #777777;
 }
 
 #count {
-    font-family: Arial, sans-serif;
+    font-family:
+        Arial,
+        sans-serif;
+
     font-size: 10px;
+
     letter-spacing: 3px;
+
     color: #555555;
 }
 
-/* REVIEW */
 
-#reviews {
-    margin-top: 10px;
-}
+/* =========================================
+   REVIEW
+========================================= */
 
 .review {
     padding: 50px 0;
 
-    border-bottom: 1px solid #333333;
+    border-bottom:
+        1px solid #333333;
+
+    animation:
+        revealReview 0.7s ease;
+}
+
+@keyframes revealReview {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
 }
 
 .review-top {
     display: flex;
-    justify-content: space-between;
+
+    justify-content:
+        space-between;
+
     gap: 20px;
 }
 
 .review-name {
     font-size: 20px;
+
     color: #aaa7a1;
 }
 
 .review-date {
-    font-family: Arial, sans-serif;
+    font-family:
+        Arial,
+        sans-serif;
+
     font-size: 9px;
+
     letter-spacing: 2px;
+
     color: #555555;
-    white-space: nowrap;
+
+    white-space:
+        nowrap;
 }
 
 .review-message {
@@ -279,57 +486,90 @@ button:disabled {
     margin-top: 35px;
 
     font-size: 26px;
+
     line-height: 1.5;
 
     color: #aaa7a1;
+
+    white-space:
+        pre-wrap;
+
+    word-break:
+        break-word;
 }
 
-/* EMPTY */
 
-.empty {
+/* =========================================
+   EMPTY / LOADING
+========================================= */
+
+.empty,
+.loading {
     padding: 60px 0;
 
-    font-family: Arial, sans-serif;
+    font-family:
+        Arial,
+        sans-serif;
+
     font-size: 10px;
+
     letter-spacing: 4px;
 
     color: #555555;
 }
 
-/* FOOTER */
+
+/* =========================================
+   FOOTER
+========================================= */
 
 footer {
     max-width: 900px;
-    margin: 100px auto 0;
+
+    margin:
+        100px auto 0;
 
     padding-top: 25px;
 
-    border-top: 1px solid #333333;
+    border-top:
+        1px solid #333333;
 
     display: flex;
-    justify-content: space-between;
 
-    font-family: Arial, sans-serif;
+    justify-content:
+        space-between;
+
+    font-family:
+        Arial,
+        sans-serif;
+
     font-size: 9px;
+
     letter-spacing: 3px;
 
     color: #555555;
 }
 
-/* MOBILE */
+
+/* =========================================
+   MOBILE
+========================================= */
 
 @media (max-width: 600px) {
 
     .page {
-        padding: 30px 25px;
+        padding:
+            30px 25px;
     }
 
     .intro {
-        padding: 75px 0 60px;
+        padding:
+            75px 0 60px;
     }
 
     h1 {
-        letter-spacing: -3px;
+        letter-spacing:
+            -3px;
     }
 
     .form {
@@ -337,7 +577,9 @@ footer {
     }
 
     .review-top {
-        flex-direction: column;
+        flex-direction:
+            column;
+
         gap: 12px;
     }
 
@@ -346,8 +588,16 @@ footer {
     }
 
     footer {
-        flex-direction: column;
+        flex-direction:
+            column;
+
         gap: 15px;
+    }
+
+    .happy-sticker {
+        font-size: 38px;
+
+        bottom: 25px;
     }
 
 }
@@ -359,8 +609,25 @@ footer {
 
 <body>
 
+
+<!-- =========================================
+     HAPPY STICKER
+========================================= -->
+
+<div
+    id="happySticker"
+    class="happy-sticker"
+>
+    :)
+</div>
+
+
 <div class="page">
 
+
+<!-- =========================================
+     HEADER
+========================================= -->
 
 <header>
 
@@ -378,6 +645,10 @@ GUESTBOOK · 02
 <main>
 
 
+<!-- =========================================
+     INTRO
+========================================= -->
+
 <section class="intro">
 
 <div class="label">
@@ -394,6 +665,8 @@ A thought.
 A feeling.
 A few words.
 
+<br>
+
 Leave something here
 for the next version of me.
 
@@ -401,6 +674,10 @@ for the next version of me.
 
 </section>
 
+
+<!-- =========================================
+     FORM
+========================================= -->
 
 <section class="form">
 
@@ -412,10 +689,11 @@ NAME · OPTIONAL
 </label>
 
 <input
-type="text"
-id="name"
-placeholder="Anonymous"
-maxlength="40"
+    type="text"
+    id="name"
+    placeholder="Anonymous"
+    maxlength="40"
+    autocomplete="off"
 >
 
 </div>
@@ -428,21 +706,19 @@ YOUR MESSAGE
 </label>
 
 <textarea
-id="message"
-placeholder="What did you feel here?"
-maxlength="300"
+    id="message"
+    placeholder="What did you feel here?"
+    maxlength="300"
 ></textarea>
 
 </div>
 
 
 <button
-id="submitButton"
-onclick="sendMessage()"
+    id="submitButton"
+    onclick="sendMessage()"
 >
-
 LEAVE MESSAGE
-
 </button>
 
 
@@ -451,6 +727,10 @@ LEAVE MESSAGE
 
 </section>
 
+
+<!-- =========================================
+     TRACES
+========================================= -->
 
 <section class="traces">
 
@@ -470,7 +750,7 @@ TRACES
 
 <div id="reviews">
 
-<div class="empty">
+<div class="loading">
 LOADING...
 </div>
 
@@ -482,6 +762,10 @@ LOADING...
 
 </main>
 
+
+<!-- =========================================
+     FOOTER
+========================================= -->
 
 <footer>
 
@@ -501,8 +785,9 @@ PERSONAL ARCHIVE
 
 <script>
 
+
 /* =========================================
-   SUPABASE
+   SUPABASE CONFIG
 ========================================= */
 
 const SUPABASE_URL =
@@ -519,36 +804,48 @@ const SUPABASE_KEY =
 async function loadReviews() {
 
     const reviewsBox =
-        document.getElementById("reviews");
+        document.getElementById(
+            "reviews"
+        );
 
     const count =
-        document.getElementById("count");
+        document.getElementById(
+            "count"
+        );
+
 
     try {
 
         const response =
             await fetch(
+
                 SUPABASE_URL +
                 "/rest/v1/reviews" +
                 "?select=id,name,message,created_at" +
                 "&order=created_at.desc",
+
                 {
                     method: "GET",
 
                     headers: {
-                        "apikey": SUPABASE_KEY,
+
+                        "apikey":
+                            SUPABASE_KEY,
+
                         "Authorization":
                             "Bearer " +
                             SUPABASE_KEY
+
                     }
                 }
+
             );
 
 
         if (!response.ok) {
 
             throw new Error(
-                "Could not load messages."
+                "Unable to load reviews."
             );
 
         }
@@ -562,9 +859,12 @@ async function loadReviews() {
             reviews.length;
 
 
-        if (reviews.length === 0) {
+        if (
+            reviews.length === 0
+        ) {
 
             reviewsBox.innerHTML =
+
                 `
                 <div class="empty">
                     NO TRACES YET.
@@ -572,32 +872,39 @@ async function loadReviews() {
                 `;
 
             return;
-
         }
 
 
-        reviewsBox.innerHTML = "";
+        reviewsBox.innerHTML =
+            "";
 
 
         reviews.forEach(
             function(review) {
 
+
                 const article =
-                    document.createElement("article");
+                    document.createElement(
+                        "article"
+                    );
 
                 article.className =
                     "review";
 
 
                 const top =
-                    document.createElement("div");
+                    document.createElement(
+                        "div"
+                    );
 
                 top.className =
                     "review-top";
 
 
                 const name =
-                    document.createElement("div");
+                    document.createElement(
+                        "div"
+                    );
 
                 name.className =
                     "review-name";
@@ -608,26 +915,36 @@ async function loadReviews() {
 
 
                 const date =
-                    document.createElement("div");
+                    document.createElement(
+                        "div"
+                    );
 
                 date.className =
                     "review-date";
 
 
-                if (review.created_at) {
+                if (
+                    review.created_at
+                ) {
 
-                    const d =
+                    const dateObject =
                         new Date(
                             review.created_at
                         );
 
+
                     date.textContent =
-                        d.toLocaleDateString(
+                        dateObject.toLocaleDateString(
                             "en-US",
                             {
-                                month: "short",
-                                day: "2-digit",
-                                year: "numeric"
+                                month:
+                                    "short",
+
+                                day:
+                                    "2-digit",
+
+                                year:
+                                    "numeric"
                             }
                         );
 
@@ -635,26 +952,39 @@ async function loadReviews() {
 
 
                 const message =
-                    document.createElement("div");
+                    document.createElement(
+                        "div"
+                    );
 
                 message.className =
                     "review-message";
 
                 message.textContent =
-                    review.message;
+                    review.message ||
+                    "";
 
 
-                top.appendChild(name);
+                top.appendChild(
+                    name
+                );
 
-                top.appendChild(date);
+                top.appendChild(
+                    date
+                );
 
 
-                article.appendChild(top);
+                article.appendChild(
+                    top
+                );
 
-                article.appendChild(message);
+                article.appendChild(
+                    message
+                );
 
 
-                reviewsBox.appendChild(article);
+                reviewsBox.appendChild(
+                    article
+                );
 
             }
         );
@@ -664,9 +994,13 @@ async function loadReviews() {
 
     catch (error) {
 
-        console.error(error);
+        console.error(
+            error
+        );
+
 
         reviewsBox.innerHTML =
+
             `
             <div class="empty">
                 COULD NOT LOAD TRACES.
@@ -684,38 +1018,63 @@ async function loadReviews() {
 
 async function sendMessage() {
 
+
     const nameInput =
-        document.getElementById("name");
+        document.getElementById(
+            "name"
+        );
+
 
     const messageInput =
-        document.getElementById("message");
+        document.getElementById(
+            "message"
+        );
+
 
     const status =
-        document.getElementById("status");
+        document.getElementById(
+            "status"
+        );
+
 
     const button =
-        document.getElementById("submitButton");
+        document.getElementById(
+            "submitButton"
+        );
+
+
+    const sticker =
+        document.getElementById(
+            "happySticker"
+        );
 
 
     const name =
         nameInput.value.trim() ||
         "Anonymous";
 
+
     const message =
         messageInput.value.trim();
 
+
+    /* EMPTY MESSAGE */
 
     if (!message) {
 
         status.textContent =
             "WRITE SOMETHING FIRST.";
 
-        return;
+        messageInput.focus();
 
+        return;
     }
 
 
-    button.disabled = true;
+    /* START */
+
+    button.disabled =
+        true;
 
     button.textContent =
         "SENDING...";
@@ -726,15 +1085,22 @@ async function sendMessage() {
 
     try {
 
+
         const response =
             await fetch(
+
                 SUPABASE_URL +
                 "/rest/v1/reviews",
+
                 {
-                    method: "POST",
+
+                    method:
+                        "POST",
 
                     headers: {
-                        "apikey": SUPABASE_KEY,
+
+                        "apikey":
+                            SUPABASE_KEY,
 
                         "Authorization":
                             "Bearer " +
@@ -745,49 +1111,90 @@ async function sendMessage() {
 
                         "Prefer":
                             "return=minimal"
+
                     },
 
-                    body: JSON.stringify({
-                        name: name,
-                        message: message
-                    })
+
+                    body:
+                        JSON.stringify({
+
+                            name:
+                                name,
+
+                            message:
+                                message
+
+                        })
+
                 }
+
             );
 
 
         if (!response.ok) {
 
-            const errorText =
+            const error =
                 await response.text();
 
+
             console.error(
-                errorText
+                error
             );
 
+
             throw new Error(
-                "Message was not saved."
+                "Message not saved."
             );
 
         }
 
 
+        /* SUCCESS */
+
         status.textContent =
             "MESSAGE RECEIVED.";
 
 
-        nameInput.value = "";
+        nameInput.value =
+            "";
 
-        messageInput.value = "";
+        messageInput.value =
+            "";
 
+
+        /* HAPPY :) */
+
+        sticker.classList.add(
+            "show"
+        );
+
+
+        setTimeout(
+            function() {
+
+                sticker.classList.remove(
+                    "show"
+                );
+
+            },
+            3000
+        );
+
+
+        /* UPDATE REVIEWS */
 
         await loadReviews();
 
 
     }
 
+
     catch (error) {
 
-        console.error(error);
+        console.error(
+            error
+        );
+
 
         status.textContent =
             "SOMETHING WENT WRONG.";
@@ -795,7 +1202,8 @@ async function sendMessage() {
     }
 
 
-    button.disabled = false;
+    button.disabled =
+        false;
 
     button.textContent =
         "LEAVE MESSAGE";
