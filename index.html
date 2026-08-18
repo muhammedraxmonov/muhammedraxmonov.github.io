@@ -29,7 +29,9 @@ body.leaving {
 }
 
 
-/* PAGE */
+/* =========================================
+   PAGE
+========================================= */
 
 .page {
     min-height: 100vh;
@@ -40,7 +42,9 @@ body.leaving {
 }
 
 
-/* HEADER */
+/* =========================================
+   HEADER
+========================================= */
 
 header {
     display: flex;
@@ -57,7 +61,8 @@ header {
 
     color: #888888;
 
-    animation: fadeUp 1s ease forwards;
+    animation:
+        fadeUp 1s ease forwards;
 }
 
 .number {
@@ -65,7 +70,9 @@ header {
 }
 
 
-/* ANIMATION */
+/* =========================================
+   ANIMATION
+========================================= */
 
 @keyframes fadeUp {
 
@@ -82,7 +89,9 @@ header {
 }
 
 
-/* MAIN */
+/* =========================================
+   MAIN
+========================================= */
 
 main {
     max-width: 900px;
@@ -90,16 +99,20 @@ main {
 
     margin: 0 auto;
 
-    padding: 90px 0 70px;
+    padding:
+        90px 0 70px;
 }
 
 
-/* EYEBROW */
+/* =========================================
+   EYEBROW
+========================================= */
 
 .eyebrow {
     font-family: Arial, sans-serif;
 
     font-size: 10px;
+
     letter-spacing: 5px;
 
     color: #777777;
@@ -113,7 +126,9 @@ main {
 }
 
 
-/* TITLE */
+/* =========================================
+   TITLE
+========================================= */
 
 h1 {
     font-size:
@@ -134,7 +149,9 @@ h1 {
 }
 
 
-/* MEMORY */
+/* =========================================
+   MEMORY
+========================================= */
 
 .memory {
     margin-top: 35px;
@@ -162,7 +179,9 @@ h1 {
 }
 
 
-/* DESCRIPTION */
+/* =========================================
+   DESCRIPTION
+========================================= */
 
 .description {
     max-width: 620px;
@@ -183,7 +202,9 @@ h1 {
 }
 
 
-/* VIDEO SECTION */
+/* =========================================
+   VIDEO SECTION
+========================================= */
 
 .video-section {
     margin-top: 90px;
@@ -210,13 +231,18 @@ h1 {
 /* VIDEO */
 
 .video-frame {
+    position: relative;
+
     width: 100%;
 
-    background: #090909;
+    background: #080808;
 
-    border: 1px solid #333333;
+    border:
+        1px solid #333333;
 
     overflow: hidden;
+
+    cursor: pointer;
 }
 
 .video-frame video {
@@ -230,11 +256,77 @@ h1 {
 
     object-fit: cover;
 
-    background: #090909;
+    background: #080808;
+
+    transition:
+        transform 0.6s ease,
+        opacity 0.4s ease;
+}
+
+.video-frame:hover video {
+    transform: scale(1.015);
 }
 
 
-/* VIDEO QUOTE */
+/* PLAY OVERLAY */
+
+.video-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    pointer-events: none;
+}
+
+.play-circle {
+    width: 70px;
+
+    height: 70px;
+
+    border:
+        1px solid rgba(255,255,255,0.6);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #ffffff;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 22px;
+
+    background:
+        rgba(0,0,0,0.15);
+
+    backdrop-filter:
+        blur(3px);
+
+    opacity: 0.85;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+.video-frame:hover .play-circle {
+    transform: scale(1.1);
+
+    opacity: 1;
+}
+
+
+/* QUOTE */
 
 .video-quote {
     max-width: 700px;
@@ -243,7 +335,8 @@ h1 {
 
     padding-left: 25px;
 
-    border-left: 1px solid #555555;
+    border-left:
+        1px solid #555555;
 
     font-size:
         clamp(20px, 3vw, 27px);
@@ -268,7 +361,126 @@ h1 {
 }
 
 
-/* LINKS */
+/* =========================================
+   FULLSCREEN VIDEO
+========================================= */
+
+.video-modal {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 10000;
+
+    background:
+        rgba(5,5,5,0.96);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 35px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity 0.4s ease,
+        visibility 0.4s ease;
+}
+
+.video-modal.active {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+.modal-video {
+    max-width: 90vw;
+
+    max-height: 88vh;
+
+    width: auto;
+
+    height: auto;
+
+    object-fit: contain;
+
+    box-shadow:
+        0 20px 80px
+        rgba(0,0,0,0.7);
+}
+
+.close-video {
+    position: absolute;
+
+    top: 25px;
+
+    right: 30px;
+
+    width: 45px;
+
+    height: 45px;
+
+    border:
+        1px solid #555555;
+
+    background:
+        transparent;
+
+    color: #f2f0eb;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.close-video:hover {
+    background: #f2f0eb;
+
+    color: #111111;
+}
+
+.modal-caption {
+    position: absolute;
+
+    bottom: 25px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    font-family: Arial, sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    color: #777777;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   LINKS
+========================================= */
 
 .links {
     display: flex;
@@ -284,7 +496,6 @@ h1 {
     animation:
         fadeUp 1.2s ease 1.2s forwards;
 }
-
 
 .enter {
     display: inline-flex;
@@ -312,7 +523,6 @@ h1 {
         color 0.3s ease;
 }
 
-
 .enter span {
     font-size: 20px;
 
@@ -320,11 +530,9 @@ h1 {
         transform 0.3s ease;
 }
 
-
 .enter:hover {
     color: #aaaaaa;
 }
-
 
 .enter:hover span {
     transform:
@@ -332,7 +540,9 @@ h1 {
 }
 
 
-/* STATUS */
+/* =========================================
+   STATUS
+========================================= */
 
 .status {
     margin-top: 75px;
@@ -357,7 +567,6 @@ h1 {
         fadeUp 1.2s ease 1.3s forwards;
 }
 
-
 .dot {
     width: 6px;
 
@@ -371,7 +580,6 @@ h1 {
         pulse 2s infinite;
 }
 
-
 @keyframes pulse {
 
     0%, 100% {
@@ -383,7 +591,6 @@ h1 {
     }
 
 }
-
 
 .time {
     margin-top: 18px;
@@ -398,7 +605,9 @@ h1 {
 }
 
 
-/* QUOTE */
+/* =========================================
+   QUOTE
+========================================= */
 
 .quote {
     margin-top: 120px;
@@ -425,7 +634,9 @@ h1 {
 }
 
 
-/* ABOUT */
+/* =========================================
+   ABOUT
+========================================= */
 
 .about {
     margin-top: 100px;
@@ -445,7 +656,6 @@ h1 {
         transform 1s ease;
 }
 
-
 .about-label {
     font-family: Arial, sans-serif;
 
@@ -457,7 +667,6 @@ h1 {
 
     margin-bottom: 35px;
 }
-
 
 .about h2 {
     font-size:
@@ -472,7 +681,6 @@ h1 {
     letter-spacing: -2px;
 }
 
-
 .about p {
     max-width: 650px;
 
@@ -485,7 +693,6 @@ h1 {
     color: #aaa7a1;
 }
 
-
 .signature {
     margin-top: 55px;
 
@@ -497,7 +704,6 @@ h1 {
 
     color: #888888;
 }
-
 
 .signature span {
     display: block;
@@ -519,7 +725,9 @@ h1 {
 }
 
 
-/* FOOTER */
+/* =========================================
+   FOOTER
+========================================= */
 
 footer {
     max-width: 900px;
@@ -557,53 +765,104 @@ footer {
 }
 
 
-/* MOBILE */
+/* =========================================
+   MOBILE
+========================================= */
 
 @media (max-width: 600px) {
 
     .page {
-        padding: 30px 25px;
+        padding:
+            30px 25px;
     }
 
     main {
-        padding-top: 75px;
+        padding-top:
+            75px;
     }
 
     h1 {
-        letter-spacing: -3px;
+        letter-spacing:
+            -3px;
     }
 
     .video-section {
-        margin-top: 70px;
+        margin-top:
+            70px;
     }
 
     .video-quote {
-        padding-left: 18px;
+        padding-left:
+            18px;
 
-        font-size: 20px;
+        font-size:
+            20px;
+    }
+
+    .play-circle {
+        width:
+            58px;
+
+        height:
+            58px;
     }
 
     .links {
-        flex-direction: column;
+        flex-direction:
+            column;
 
-        gap: 25px;
+        gap:
+            25px;
 
         align-items:
             flex-start;
     }
 
     .quote {
-        margin-top: 100px;
+        margin-top:
+            100px;
     }
 
     .about {
-        margin-top: 85px;
+        margin-top:
+            85px;
     }
 
     footer {
-        flex-direction: column;
+        flex-direction:
+            column;
 
-        gap: 15px;
+        gap:
+            15px;
+    }
+
+    .video-modal {
+        padding:
+            15px;
+    }
+
+    .modal-video {
+        max-width:
+            96vw;
+
+        max-height:
+            82vh;
+    }
+
+    .close-video {
+        top:
+            15px;
+
+        right:
+            15px;
+    }
+
+    .modal-caption {
+        bottom:
+            12px;
+
+        font-size:
+            8px;
     }
 
 }
@@ -665,7 +924,9 @@ thoughts and memories.
 </div>
 
 
-<!-- VIDEO -->
+<!-- =========================================
+     VIDEO
+========================================= -->
 
 <section class="video-section">
 
@@ -675,11 +936,16 @@ A MOMENT I KEPT · 01
 </div>
 
 
-<div class="video-frame">
+<div
+class="video-frame"
+id="videoFrame"
+>
 
 <video
-controls
+id="previewVideo"
 playsinline
+muted
+loop
 preload="metadata"
 >
 
@@ -691,6 +957,16 @@ type="video/mp4"
 Your browser does not support video.
 
 </video>
+
+
+<div class="video-overlay">
+
+<div class="play-circle">
+▶
+</div>
+
+</div>
+
 
 </div>
 
@@ -712,7 +988,9 @@ A SMALL MEMORY · KEPT HERE
 </section>
 
 
-<!-- LINKS -->
+<!-- =========================================
+     LINKS
+========================================= -->
 
 <div class="links">
 
@@ -778,9 +1056,7 @@ LOCAL TIME · ONLINE
 class="time"
 id="clock"
 >
-
 00:00:00
-
 </div>
 
 
@@ -857,6 +1133,50 @@ PERSONAL ARCHIVE
 </div>
 
 
+<!-- =========================================
+     FULLSCREEN VIDEO MODAL
+========================================= -->
+
+<div
+class="video-modal"
+id="videoModal"
+>
+
+
+<button
+class="close-video"
+id="closeVideo"
+aria-label="Close video"
+>
+×
+</button>
+
+
+<video
+class="modal-video"
+id="modalVideo"
+controls
+playsinline
+>
+
+<source
+src="6569202398630419723.mp4"
+type="video/mp4"
+>
+
+Your browser does not support video.
+
+</video>
+
+
+<div class="modal-caption">
+A MOMENT I KEPT · 01
+</div>
+
+
+</div>
+
+
 <script>
 
 
@@ -895,7 +1215,7 @@ function(event) {
 
 
 /* =========================================
-   LIVE CLOCK
+   CLOCK
 ========================================= */
 
 function updateClock() {
@@ -1052,6 +1372,164 @@ else {
         ". · <strong>YOU KEEP COMING BACK.</strong>";
 
 }
+
+
+/* =========================================
+   VIDEO PREVIEW
+========================================= */
+
+const videoFrame =
+document.getElementById(
+    "videoFrame"
+);
+
+const previewVideo =
+document.getElementById(
+    "previewVideo"
+);
+
+const videoModal =
+document.getElementById(
+    "videoModal"
+);
+
+const modalVideo =
+document.getElementById(
+    "modalVideo"
+);
+
+const closeVideo =
+document.getElementById(
+    "closeVideo"
+);
+
+
+/* Preview automatically plays silently */
+
+videoFrame.addEventListener(
+    "mouseenter",
+    function() {
+
+        previewVideo.play()
+        .catch(
+            function() {}
+        );
+
+    }
+);
+
+
+/* Mobile / first interaction */
+
+videoFrame.addEventListener(
+    "touchstart",
+    function() {
+
+        previewVideo.play()
+        .catch(
+            function() {}
+        );
+
+    },
+    {
+        once: true
+    }
+);
+
+
+/* Open fullscreen modal */
+
+videoFrame.addEventListener(
+    "click",
+    function() {
+
+        videoModal.classList.add(
+            "active"
+        );
+
+        modalVideo.currentTime =
+            0;
+
+        modalVideo.play()
+        .catch(
+            function() {}
+        );
+
+        document.body.style.overflow =
+            "hidden";
+
+    }
+);
+
+
+/* Close */
+
+function closeFullscreenVideo() {
+
+    videoModal.classList.remove(
+        "active"
+    );
+
+    modalVideo.pause();
+
+    document.body.style.overflow =
+        "";
+
+}
+
+
+/* Close button */
+
+closeVideo.addEventListener(
+    "click",
+    function(event) {
+
+        event.stopPropagation();
+
+        closeFullscreenVideo();
+
+    }
+);
+
+
+/* Click outside video */
+
+videoModal.addEventListener(
+    "click",
+    function(event) {
+
+        if (
+            event.target ===
+            videoModal
+        ) {
+
+            closeFullscreenVideo();
+
+        }
+
+    }
+);
+
+
+/* ESC key */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (
+            event.key === "Escape" &&
+            videoModal.classList.contains(
+                "active"
+            )
+        ) {
+
+            closeFullscreenVideo();
+
+        }
+
+    }
+);
 
 </script>
 
