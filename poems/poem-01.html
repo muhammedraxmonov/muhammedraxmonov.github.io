@@ -22,32 +22,19 @@ html {
 
 body {
     margin: 0;
-
     background: #111111;
-
     color: #f2f0eb;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    transition:
-        opacity 0.5s ease;
+    font-family: Georgia, "Times New Roman", serif;
+    transition: opacity 0.5s ease;
 }
 
 body.leaving {
     opacity: 0;
 }
 
-
-/* PAGE */
-
 .page {
     min-height: 100vh;
-
-    padding:
-        32px 25px;
+    padding: 32px 25px;
 }
 
 
@@ -55,30 +42,19 @@ body.leaving {
 
 header {
     max-width: 900px;
-
     width: 100%;
-
     margin: 0 auto;
 
     padding-bottom: 25px;
 
-    border-bottom:
-        1px solid #333333;
+    border-bottom: 1px solid #333333;
 
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    justify-content:
-        space-between;
-
-    align-items:
-        center;
-
-    font-family:
-        Arial,
-        sans-serif;
-
+    font-family: Arial, sans-serif;
     font-size: 10px;
-
     letter-spacing: 4px;
 
     color: #777777;
@@ -86,11 +62,7 @@ header {
 
 header a {
     color: #777777;
-
     text-decoration: none;
-
-    transition:
-        color 0.3s ease;
 }
 
 header a:hover {
@@ -102,22 +74,18 @@ header a:hover {
 
 main {
     max-width: 900px;
-
     width: 100%;
 
     margin: 0 auto;
 
-    padding:
-        100px 0 100px;
+    padding: 100px 0;
 }
 
 
-/* EYEBROW */
+/* TOP TEXT */
 
 .eyebrow {
-    font-family:
-        Arial,
-        sans-serif;
+    font-family: Arial, sans-serif;
 
     font-size: 10px;
 
@@ -134,37 +102,24 @@ main {
 h1 {
     margin: 0;
 
-    font-size:
-        clamp(
-            65px,
-            13vw,
-            150px
-        );
+    font-size: clamp(65px, 13vw, 150px);
 
-    font-weight:
-        normal;
+    font-weight: normal;
 
-    line-height:
-        0.85;
+    line-height: 0.85;
 
-    letter-spacing:
-        -5px;
+    letter-spacing: -5px;
 }
 
 
-/* INTRO */
+/* DESCRIPTION */
 
 .intro {
     max-width: 650px;
 
     margin-top: 45px;
 
-    font-size:
-        clamp(
-            20px,
-            3vw,
-            28px
-        );
+    font-size: clamp(20px, 3vw, 28px);
 
     line-height: 1.5;
 
@@ -181,31 +136,27 @@ h1 {
 
     background: #333333;
 
-    margin:
-        90px 0 45px;
+    margin: 90px 0 45px;
 }
 
 
-/* POEM LIST */
+/* POEMS */
 
 .poems {
     display: flex;
 
-    flex-direction:
-        column;
+    flex-direction: column;
 }
 
 
-/* POEM */
+/* POEM LINK */
 
 .poem {
     display: block;
 
-    padding:
-        35px 0;
+    padding: 35px 0;
 
-    border-bottom:
-        1px solid #333333;
+    border-bottom: 1px solid #333333;
 
     color: #f2f0eb;
 
@@ -223,20 +174,16 @@ h1 {
 }
 
 
-/* POEM TOP */
+/* NUMBER + DATE */
 
 .poem-top {
     display: flex;
 
-    justify-content:
-        space-between;
+    justify-content: space-between;
 
-    align-items:
-        center;
+    align-items: center;
 
-    font-family:
-        Arial,
-        sans-serif;
+    font-family: Arial, sans-serif;
 
     font-size: 9px;
 
@@ -248,37 +195,27 @@ h1 {
 }
 
 
-/* POEM TITLE */
+/* TITLE */
 
 .poem-title {
     display: flex;
 
-    justify-content:
-        space-between;
+    justify-content: space-between;
 
-    align-items:
-        center;
+    align-items: center;
 
-    font-size:
-        clamp(
-            32px,
-            6vw,
-            60px
-        );
+    font-size: clamp(32px, 6vw, 60px);
 
     line-height: 1;
 
-    font-weight:
-        normal;
+    font-weight: normal;
 }
 
 
 /* ARROW */
 
 .arrow {
-    font-family:
-        Arial,
-        sans-serif;
+    font-family: Arial, sans-serif;
 
     font-size: 30px;
 
@@ -290,8 +227,7 @@ h1 {
 }
 
 .poem:hover .arrow {
-    transform:
-        translateX(10px);
+    transform: translateX(10px);
 
     color: #f2f0eb;
 }
@@ -302,9 +238,7 @@ h1 {
 .poem-description {
     margin-top: 20px;
 
-    font-family:
-        Arial,
-        sans-serif;
+    font-family: Arial, sans-serif;
 
     font-size: 9px;
 
@@ -321,16 +255,15 @@ h1 {
 
     padding-top: 30px;
 
-    border-top:
-        1px solid #333333;
+    border-top: 1px solid #333333;
+
+    max-width: 650px;
 
     font-size: 20px;
 
     font-style: italic;
 
     color: #777777;
-
-    max-width: 650px;
 }
 
 
@@ -345,17 +278,13 @@ footer {
 
     padding-top: 25px;
 
-    border-top:
-        1px solid #333333;
+    border-top: 1px solid #333333;
 
     display: flex;
 
-    justify-content:
-        space-between;
+    justify-content: space-between;
 
-    font-family:
-        Arial,
-        sans-serif;
+    font-family: Arial, sans-serif;
 
     font-size: 9px;
 
@@ -370,23 +299,19 @@ footer {
 @media (max-width: 600px) {
 
     .page {
-        padding:
-            30px 25px;
+        padding: 30px 25px;
     }
 
     main {
-        padding-top:
-            75px;
+        padding-top: 75px;
     }
 
     h1 {
-        letter-spacing:
-            -3px;
+        letter-spacing: -3px;
     }
 
     .poem {
-        padding:
-            30px 0;
+        padding: 30px 0;
     }
 
     .poem-title {
@@ -398,13 +323,11 @@ footer {
     }
 
     .quote {
-        margin-top:
-            80px;
+        margin-top: 80px;
     }
 
     footer {
-        flex-direction:
-            column;
+        flex-direction: column;
 
         gap: 15px;
     }
@@ -422,8 +345,6 @@ footer {
 <div class="page">
 
 
-<!-- HEADER -->
-
 <header>
 
 <a href="index.html">
@@ -431,13 +352,11 @@ MUHAMMED.R
 </a>
 
 <div>
-02 — 01
+POETRY · 01
 </div>
 
 </header>
 
-
-<!-- MAIN -->
 
 <main>
 
@@ -457,6 +376,8 @@ Poetry
 Some words are never meant
 to be spoken.
 
+<br>
+
 Some are meant to remain.
 
 </div>
@@ -464,8 +385,6 @@ Some are meant to remain.
 
 <div class="divider"></div>
 
-
-<!-- POEMS -->
 
 <div class="poems">
 
@@ -516,8 +435,6 @@ LOVE · LOSS · LETTING GO
 </div>
 
 
-<!-- QUOTE -->
-
 <div class="quote">
 
 “Some feelings are too deep
@@ -528,8 +445,6 @@ to become ordinary words.”
 
 </main>
 
-
-<!-- FOOTER -->
 
 <footer>
 
@@ -549,54 +464,40 @@ PERSONAL ARCHIVE
 
 <script>
 
-/* PAGE TRANSITION */
-
 const links =
-document.querySelectorAll(
-    "a"
-);
+document.querySelectorAll("a");
 
 
-links.forEach(
-    function(link) {
+links.forEach(function(link) {
 
-        link.addEventListener(
-            "click",
-            function(event) {
+    link.addEventListener(
+        "click",
+        function(event) {
 
-                const href =
-                    link.getAttribute(
-                        "href"
-                    );
+            const href =
+                link.getAttribute("href");
 
-                if (
-                    !href ||
-                    href.startsWith("#")
-                ) {
-                    return;
-                }
-
-                event.preventDefault();
-
-                document.body.classList.add(
-                    "leaving"
-                );
-
-                setTimeout(
-                    function() {
-
-                        window.location.href =
-                            href;
-
-                    },
-                    400
-                );
-
+            if (!href) {
+                return;
             }
-        );
 
-    }
-);
+            event.preventDefault();
+
+            document.body.classList.add(
+                "leaving"
+            );
+
+            setTimeout(function() {
+
+                window.location.href =
+                    href;
+
+            }, 400);
+
+        }
+    );
+
+});
 
 </script>
 
