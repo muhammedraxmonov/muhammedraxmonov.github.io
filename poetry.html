@@ -1,178 +1,514 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammed.R — Poetry</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
 
-        body {
-            margin: 0;
-            background: #111111;
-            color: #f2f0eb;
-            font-family: Georgia, "Times New Roman", serif;
-        }
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-        .page {
-            max-width: 850px;
-            margin: 0 auto;
-            padding: 60px 25px 100px;
-        }
+<title>Muhammed.R — Poetry</title>
 
-        .top {
-            font-family: Arial, sans-serif;
-            font-size: 12px;
-            letter-spacing: 5px;
-            color: #888888;
-            margin-bottom: 90px;
-        }
+<style>
 
-        .back {
-            display: inline-block;
-            margin-bottom: 70px;
-            color: #888888;
-            text-decoration: none;
-            font-family: Arial, sans-serif;
-            font-size: 11px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-        }
+* {
+    box-sizing: border-box;
+}
 
-        h1 {
-            font-size: clamp(55px, 10vw, 105px);
-            font-weight: normal;
-            line-height: 0.95;
-            margin: 0 0 35px;
-        }
+html {
+    scroll-behavior: smooth;
+}
 
-        .line {
-            width: 100%;
-            height: 1px;
-            background: #3d3d3d;
-            margin: 35px 0 60px;
-        }
+body {
+    margin: 0;
+    background: #111111;
+    color: #f2f0eb;
+    font-family: Georgia, "Times New Roman", serif;
+}
 
-        .meta {
-            font-family: Arial, sans-serif;
-            font-size: 11px;
-            letter-spacing: 4px;
-            color: #888888;
-            margin-bottom: 35px;
-        }
+.page {
+    min-height: 100vh;
+    padding: 30px 25px 70px;
+}
 
-        .poem {
-            font-size: clamp(20px, 3vw, 27px);
-            line-height: 1.75;
-            color: #dedbd5;
-        }
 
-        .poem p {
-            margin: 0 0 38px;
-        }
+/* HEADER */
 
-        .signature {
-            margin-top: 80px;
-            font-family: Arial, sans-serif;
-            font-size: 12px;
-            letter-spacing: 4px;
-            color: #777777;
-        }
+header {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
 
-        footer {
-            margin-top: 120px;
-            padding-top: 25px;
-            border-top: 1px solid #333333;
-            font-family: Arial, sans-serif;
-            font-size: 10px;
-            letter-spacing: 3px;
-            color: #555555;
-        }
-    </style>
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid #333333;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+
+    color: #777777;
+}
+
+header a {
+    color: #777777;
+    text-decoration: none;
+}
+
+header a:hover {
+    color: #f2f0eb;
+}
+
+
+/* MAIN */
+
+main {
+    max-width: 850px;
+    width: 100%;
+    margin: 0 auto;
+
+    padding: 80px 0 100px;
+}
+
+
+/* TOP */
+
+.top {
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 5px;
+    color: #666666;
+
+    margin-bottom: 35px;
+}
+
+
+/* TITLE */
+
+h1 {
+    margin: 0;
+
+    font-size: clamp(48px, 10vw, 100px);
+
+    font-weight: normal;
+
+    line-height: 0.95;
+
+    letter-spacing: -3px;
+}
+
+
+/* META */
+
+.meta {
+    margin-top: 25px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    color: #555555;
+}
+
+
+/* LINE */
+
+.line {
+    width: 100%;
+    height: 1px;
+
+    background: #333333;
+
+    margin: 65px 0;
+}
+
+
+/* POEM */
+
+.poem {
+    max-width: 720px;
+
+    font-size: clamp(19px, 3vw, 25px);
+
+    line-height: 1.9;
+
+    color: #aaa7a1;
+}
+
+.poem p {
+    margin: 0 0 40px;
+}
+
+
+/* SECOND POEM */
+
+.second-poem {
+    margin-top: 120px;
+}
+
+
+/* QUOTE */
+
+.quote {
+    max-width: 650px;
+
+    margin-top: 90px;
+
+    padding: 30px 0 30px 30px;
+
+    border-left: 1px solid #666666;
+
+    font-size: 19px;
+
+    line-height: 1.6;
+
+    font-style: italic;
+
+    color: #777777;
+}
+
+
+/* SIGNATURE */
+
+.signature {
+    margin-top: 70px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    color: #777777;
+}
+
+
+/* BACK */
+
+.back {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-top: 75px;
+
+    padding-bottom: 13px;
+
+    border-bottom: 1px solid #666666;
+
+    color: #f2f0eb;
+
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 5px;
+}
+
+.back span {
+    font-size: 20px;
+
+    transition:
+        transform 0.3s ease;
+}
+
+.back:hover span {
+    transform:
+        translateX(-7px);
+}
+
+
+/* FOOTER */
+
+footer {
+    max-width: 850px;
+
+    width: 100%;
+
+    margin: 0 auto;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #333333;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: #555555;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .page {
+        padding:
+            30px 25px 60px;
+    }
+
+    main {
+        padding-top: 65px;
+    }
+
+    h1 {
+        letter-spacing: -2px;
+    }
+
+    .poem {
+        font-size: 20px;
+        line-height: 1.85;
+    }
+
+    .second-poem {
+        margin-top: 90px;
+    }
+
+    .quote {
+        font-size: 18px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+}
+
+</style>
+
 </head>
+
 
 <body>
 
-<main class="page">
 
-    <div class="top">
-        MUHAMMED.R
-    </div>
+<div class="page">
 
-    <a href="index.html" class="back">
-        ← Back to home
-    </a>
 
-    <h1>
-        Не запасной<br>
-        вариант.
-    </h1>
+<header>
 
-    <div class="line"></div>
+<a href="index.html">
+MUHAMMED.R
+</a>
 
-    <div class="meta">
-        POEM 01 · 2026
-    </div>
+<div>
+POETRY · 01 — 02
+</div>
 
-    <div class="poem">
+</header>
 
-        <p>
-            Я не переношу людей,
-            которые однажды
-            выбирают кого-то вместо меня.
-        </p>
 
-        <p>
-            А потом, когда
-            у них никого не остаётся,
-            они вновь перебегают обратно.
-        </p>
+<main>
 
-        <p>
-            Искатели наилучших выгод.
-        </p>
 
-        <p>
-            Нет, не надо ко мне возвращаться.
-            Я не хочу ни для кого
-            быть запасным вариантом.
-        </p>
+<div class="top">
+WORDS · FEELINGS · MEMORIES
+</div>
 
-        <p>
-            Чем старше и мудрее человек,
-            тем меньше ему хочется
-            выяснять отношения.
-        </p>
 
-        <p>
-            Хочется просто встать,
-            пожелать всего хорошего
-            и уйти.
-        </p>
+<!-- ========================= -->
+<!-- POEM 01 -->
+<!-- ========================= -->
 
-        <p>
-            Здесь вам не
-            пункт постоянного приёма.
-        </p>
 
-        <p>
-            Меняйте своё направление.
-        </p>
+<h1>
+Poetry
+</h1>
 
-    </div>
 
-    <div class="signature">
-        — MUHAMMED.R
-    </div>
+<div class="meta">
+POEM 01 · 2026
+</div>
 
-    <footer>
-        MUSIC · POETRY · PHOTOGRAPHY
-    </footer>
+
+<div class="line"></div>
+
+
+<div class="poem">
+
+
+<p>
+Я не переношу людей,<br>
+которые однажды<br>
+выбирают кого-то вместо меня.
+</p>
+
+
+<p>
+А потом, когда<br>
+у них никого не остаётся,<br>
+они вновь перебегают обратно.
+</p>
+
+
+<p>
+Искатели наилучших выгод.
+</p>
+
+
+<p>
+Нет, не надо ко мне возвращаться.<br>
+Я не хочу ни для кого<br>
+быть запасным вариантом.
+</p>
+
+
+<p>
+Чем старше и мудрее человек,<br>
+тем меньше ему хочется<br>
+выяснять отношения.
+</p>
+
+
+<p>
+Хочется просто встать,<br>
+пожелать всего хорошего<br>
+и уйти.
+</p>
+
+
+<p>
+Здесь вам не<br>
+пункт постоянного приёма.
+</p>
+
+
+<p>
+Меняйте своё направление.
+</p>
+
+
+</div>
+
+
+<!-- ========================= -->
+<!-- POEM 02 -->
+<!-- ========================= -->
+
+
+<section class="second-poem">
+
+
+<h1>
+Beg‘uborim
+</h1>
+
+
+<div class="meta">
+POEM 02 · 2026
+</div>
+
+
+<div class="line"></div>
+
+
+<div class="poem">
+
+
+<p>
+Beg‘uborim yoshlandi ko‘zim,<br>
+Aybdor balki o‘zim.<br>
+Rozi bo‘lgin sevgingdan sen,<br>
+Deyolmas aytgan so‘zim.
+</p>
+
+
+<p>
+Qoshu ko‘zing tengi yo‘q aslo,<br>
+Sevib qolgandim, netay?<br>
+Ishonasan menga tanho,<br>
+Endi qandoq tashlab ketay?
+</p>
+
+
+<p>
+Qarolmayman bu ko‘zlaringga,<br>
+Endi yo‘q ehtiyoj bu nozlaringga,<br>
+Begonaman bu bahoru yozlaringga,<br>
+Baxtli bo‘lolmaymiz-da endi birga.
+</p>
+
+
+<p>
+Orzu-umidlaring bekor,<br>
+Majburman tan olishga, qolmadi imkon,<br>
+Sevgim qilolmasman izhor,<br>
+Majburman chekinishga, ojizman, ishon.
+</p>
+
+
+</div>
+
+
+<div class="quote">
+
+“Some words are never spoken —
+they simply remain inside us,
+quietly becoming memories.”
+
+</div>
+
+
+</section>
+
+
+<div class="signature">
+
+— MUHAMMED.R
+
+</div>
+
+
+<a
+href="index.html"
+class="back"
+>
+
+<span>←</span>
+
+BACK TO HOME
+
+</a>
+
 
 </main>
 
+
+<footer>
+
+<div>
+MUSIC · POETRY · PHOTOGRAPHY
+</div>
+
+<div>
+MUHAMMED.R
+</div>
+
+</footer>
+
+
+</div>
+
+
 </body>
+
 </html>
