@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Muhammed.R — Music</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #111111;
+    color: #f2f0eb;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.page {
+    min-height: 100vh;
+    padding: 30px 25px 70px;
+}
+
+
+/* HEADER */
+
+header {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid #333333;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+
+    color: #777777;
+}
+
+header a {
+    color: #777777;
+    text-decoration: none;
+}
+
+header a:hover {
+    color: #f2f0eb;
+}
+
+
+/* MAIN */
+
+main {
+    max-width: 850px;
+    width: 100%;
+    margin: 0 auto;
+
+    padding: 90px 0 100px;
+}
+
+
+/* LABEL */
+
+.label {
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 5px;
+
+    color: #666666;
+
+    margin-bottom: 35px;
+}
+
+
+/* TITLE */
+
+h1 {
+    margin: 0;
+
+    font-size: clamp(60px, 13vw, 130px);
+
+    font-weight: normal;
+
+    line-height: 0.9;
+
+    letter-spacing: -5px;
+}
+
+
+/* INTRO */
+
+.intro {
+    max-width: 600px;
+
+    margin-top: 35px;
+
+    font-size: 22px;
+
+    line-height: 1.5;
+
+    color: #aaa7a1;
+}
+
+
+/* DIVIDER */
+
+.divider {
+    width: 100%;
+
+    height: 1px;
+
+    background: #333333;
+
+    margin: 75px 0;
+}
+
+
+/* TRACK */
+
+.track {
+    max-width: 750px;
+
+    padding: 35px 0;
+
+    border-top: 1px solid #333333;
+}
+
+.track:last-child {
+    border-bottom: 1px solid #333333;
+}
+
+
+/* TRACK TOP */
+
+.track-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+}
+
+
+/* NUMBER */
+
+.number {
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    color: #555555;
+}
+
+
+/* SONG INFO */
+
+.song {
+    flex: 1;
+
+    margin-left: 35px;
+}
+
+.song-title {
+    font-size: 32px;
+
+    line-height: 1.1;
+
+    color: #f2f0eb;
+}
+
+.artist {
+    margin-top: 12px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    color: #666666;
+}
+
+
+/* PLAY BUTTON */
+
+.play {
+    width: 55px;
+
+    height: 55px;
+
+    border: 1px solid #555555;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: #f2f0eb;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.play:hover {
+    background: #f2f0eb;
+
+    color: #111111;
+
+    border-color: #f2f0eb;
+}
+
+
+/* AUDIO */
+
+audio {
+    display: none;
+}
+
+
+/* PROGRESS */
+
+.progress-area {
+    margin-top: 35px;
+}
+
+.progress {
+    width: 100%;
+
+    height: 1px;
+
+    background: #444444;
+
+    position: relative;
+
+    cursor: pointer;
+}
+
+.progress-fill {
+    width: 0%;
+
+    height: 100%;
+
+    background: #f2f0eb;
+
+    transition:
+        width 0.1s linear;
+}
+
+
+/* TIME */
+
+.time {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 12px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: #555555;
+}
+
+
+/* QUOTE */
+
+.quote {
+    max-width: 650px;
+
+    margin-top: 110px;
+
+    padding:
+        30px 0 30px 30px;
+
+    border-left: 1px solid #666666;
+
+    font-size: 20px;
+
+    line-height: 1.6;
+
+    font-style: italic;
+
+    color: #777777;
+}
+
+
+/* BACK */
+
+.back {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-top: 85px;
+
+    padding-bottom: 13px;
+
+    border-bottom: 1px solid #666666;
+
+    color: #f2f0eb;
+
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 5px;
+}
+
+.back span {
+    font-size: 20px;
+
+    transition:
+        transform 0.3s ease;
+}
+
+.back:hover span {
+    transform:
+        translateX(-7px);
+}
+
+
+/* FOOTER */
+
+footer {
+    max-width: 850px;
+
+    width: 100%;
+
+    margin: 0 auto;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #333333;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: #555555;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .page {
+        padding:
+            30px 25px 60px;
+    }
+
+    main {
+        padding-top: 70px;
+    }
+
+    h1 {
+        letter-spacing: -3px;
+    }
+
+    .intro {
+        font-size: 20px;
+    }
+
+    .song {
+        margin-left: 20px;
+    }
+
+    .song-title {
+        font-size: 25px;
+    }
+
+    .play {
+        width: 50px;
+        height: 50px;
+    }
+
+    .quote {
+        font-size: 18px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="page">
+
+
+<header>
+
+<a href="index.html">
+MUHAMMED.R
+</a>
+
+<div>
+MUSIC · 01
+</div>
+
+</header>
+
+
+<main>
+
+
+<div class="label">
+SOUND · MEMORY · FEELING
+</div>
+
+
+<h1>
+Music
+</h1>
+
+
+<div class="intro">
+Some songs don't need an explanation.
+They simply remember something for you.
+</div>
+
+
+<div class="divider"></div>
+
+
+<!-- TRACK -->
+
+<div class="track">
+
+
+<div class="track-top">
+
+
+<div class="number">
+01
+</div>
+
+
+<div class="song">
+
+<div class="song-title">
+Xafa bo’ldi sevgi
+</div>
+
+<div class="artist">
+MARKAZ
+</div>
+
+</div>
+
+
+<button
+class="play"
+id="playButton"
+>
+▶
+</button>
+
+
+</div>
+
+
+<audio
+id="audio"
+preload="metadata"
+>
+
+<source
+src="Markaz – Xafa bo’ldi sevgi .mp3"
+type="audio/mpeg"
+>
+
+</audio>
+
+
+<div class="progress-area">
+
+
+<div
+class="progress"
+id="progress"
+>
+
+<div
+class="progress-fill"
+id="progressFill"
+></div>
+
+</div>
+
+
+<div class="time">
+
+<span id="currentTime">
+00:00
+</span>
+
+<span id="duration">
+00:00
+</span>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+<div class="quote">
+
+“Some songs don't just play —
+they bring back a place,
+a person, or a feeling.”
+
+</div>
+
+
+<a
+href="index.html"
+class="back"
+>
+
+<span>←</span>
+
+BACK TO HOME
+
+</a>
+
+
+</main>
+
+
+<footer>
+
+<div>
+MUSIC · POETRY · PHOTOGRAPHY
+</div>
+
+<div>
+MUHAMMED.R
+</div>
+
+</footer>
+
+
+</div>
+
+
+<script>
+
+
+const audio =
+document.getElementById(
+    "audio"
+);
+
+const playButton =
+document.getElementById(
+    "playButton"
+);
+
+const progress =
+document.getElementById(
+    "progress"
+);
+
+const progressFill =
+document.getElementById(
+    "progressFill"
+);
+
+const currentTime =
+document.getElementById(
+    "currentTime"
+);
+
+const duration =
+document.getElementById(
+    "duration"
+);
+
+
+/* FORMAT TIME */
+
+function formatTime(seconds) {
+
+    if (
+        !Number.isFinite(seconds)
+    ) {
+        return "00:00";
+    }
+
+    const minutes =
+        Math.floor(
+            seconds / 60
+        );
+
+    const secs =
+        Math.floor(
+            seconds % 60
+        );
+
+    return (
+        String(minutes)
+            .padStart(2, "0")
+        +
+        ":"
+        +
+        String(secs)
+            .padStart(2, "0")
+    );
+
+}
+
+
+/* PLAY / PAUSE */
+
+playButton.addEventListener(
+    "click",
+    function() {
+
+        if (
+            audio.paused
+        ) {
+
+            audio.play();
+
+        } else {
+
+            audio.pause();
+
+        }
+
+    }
+);
+
+
+/* BUTTON STATE */
+
+audio.addEventListener(
+    "play",
+    function() {
+
+        playButton.textContent =
+            "Ⅱ";
+
+    }
+);
+
+
+audio.addEventListener(
+    "pause",
+    function() {
+
+        playButton.textContent =
+            "▶";
+
+    }
+);
+
+
+/* DURATION */
+
+audio.addEventListener(
+    "loadedmetadata",
+    function() {
+
+        duration.textContent =
+            formatTime(
+                audio.duration
+            );
+
+    }
+);
+
+
+/* PROGRESS */
+
+audio.addEventListener(
+    "timeupdate",
+    function() {
+
+        if (
+            audio.duration
+        ) {
+
+            const percent =
+                (
+                    audio.currentTime /
+                    audio.duration
+                ) * 100;
+
+            progressFill.style.width =
+                percent + "%";
+
+        }
+
+        currentTime.textContent =
+            formatTime(
+                audio.currentTime
+            );
+
+    }
+);
+
+
+/* CLICK PROGRESS */
+
+progress.addEventListener(
+    "click",
+    function(event) {
+
+        if (
+            !audio.duration
+        ) {
+            return;
+        }
+
+        const rect =
+            progress.getBoundingClientRect();
+
+        const position =
+            (
+                event.clientX -
+                rect.left
+            ) / rect.width;
+
+        audio.currentTime =
+            position *
+            audio.duration;
+
+    }
+);
+
+
+/* RESET */
+
+audio.addEventListener(
+    "ended",
+    function() {
+
+        playButton.textContent =
+            "▶";
+
+        progressFill.style.width =
+            "0%";
+
+    }
+);
+
+
+</script>
+
+
+</body>
+
+</html>
