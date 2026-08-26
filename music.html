@@ -186,7 +186,7 @@ h1 {
 .song-title {
     font-size: 30px;
 
-    line-height: 1.1;
+    line-height: 1.15;
 
     color: #f2f0eb;
 }
@@ -403,7 +403,7 @@ footer {
     }
 
     .song-title {
-        font-size: 24px;
+        font-size: 23px;
     }
 
     .play {
@@ -440,7 +440,7 @@ MUHAMMED.R
 </a>
 
 <div>
-MUSIC · 01 — 03
+MUSIC · 01 — 04
 </div>
 
 </header>
@@ -473,7 +473,9 @@ They simply remember something for you.
 <div class="divider"></div>
 
 
+<!-- ========================= -->
 <!-- SONG 01 -->
+<!-- ========================= -->
 
 <div class="track">
 
@@ -545,7 +547,9 @@ id="progress1">
 </div>
 
 
+<!-- ========================= -->
 <!-- SONG 02 -->
+<!-- ========================= -->
 
 <div class="track">
 
@@ -617,7 +621,9 @@ id="progress2">
 </div>
 
 
+<!-- ========================= -->
 <!-- SONG 03 -->
+<!-- ========================= -->
 
 <div class="track">
 
@@ -689,6 +695,80 @@ id="progress3">
 </div>
 
 
+<!-- ========================= -->
+<!-- SONG 04 -->
+<!-- ========================= -->
+
+<div class="track">
+
+<div class="track-top">
+
+<div class="number">
+04
+</div>
+
+<div class="song">
+
+<div class="song-title">
+NAHOTKI SHU BO'LSA SEVGI?
+</div>
+
+<div class="artist">
+ALISHER UZOQOV
+</div>
+
+</div>
+
+<button
+class="play"
+data-player="audio4">
+▶
+</button>
+
+</div>
+
+
+<audio
+id="audio4"
+preload="metadata">
+
+<source
+src="ALISHER UZOQOV – NAHOTKI SHU BO'LSA SEVGI?.mp3"
+type="audio/mpeg">
+
+</audio>
+
+
+<div class="progress-area">
+
+<div
+class="progress"
+data-progress="progress4">
+
+<div
+class="progress-fill"
+id="progress4">
+</div>
+
+</div>
+
+<div class="time">
+
+<span id="current4">
+00:00
+</span>
+
+<span id="duration4">
+00:00
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+
 <!-- QUOTE -->
 
 <div class="quote">
@@ -736,6 +816,7 @@ MUHAMMED.R
 /* PLAYERS */
 
 const players = [
+
     {
         audio: document.getElementById("audio1"),
         button: document.querySelector('[data-player="audio1"]'),
@@ -761,7 +842,17 @@ const players = [
         progressArea: document.querySelector('[data-progress="progress3"]'),
         current: document.getElementById("current3"),
         duration: document.getElementById("duration3")
+    },
+
+    {
+        audio: document.getElementById("audio4"),
+        button: document.querySelector('[data-player="audio4"]'),
+        progress: document.getElementById("progress4"),
+        progressArea: document.querySelector('[data-progress="progress4"]'),
+        current: document.getElementById("current4"),
+        duration: document.getElementById("duration4")
     }
+
 ];
 
 
@@ -786,6 +877,7 @@ function formatTime(seconds) {
         +
         String(secs).padStart(2, "0")
     );
+
 }
 
 
@@ -800,9 +892,11 @@ function stopOtherPlayers(currentAudio) {
             player.audio.pause();
 
             player.button.textContent = "▶";
+
         }
 
     });
+
 }
 
 
@@ -890,6 +984,7 @@ players.forEach(function(player) {
 
                 player.progress.style.width =
                     percent + "%";
+
             }
 
             player.current.textContent =
@@ -912,7 +1007,8 @@ players.forEach(function(player) {
             }
 
             const rect =
-                player.progressArea.getBoundingClientRect();
+                player.progressArea
+                    .getBoundingClientRect();
 
             const position =
                 (
