@@ -25,6 +25,7 @@ body {
     background: #111111;
     color: #f2f0eb;
     font-family: Georgia, "Times New Roman", serif;
+    transition: opacity 0.35s ease;
 }
 
 .page {
@@ -115,6 +116,60 @@ h1 {
     line-height: 1.55;
 
     color: #aaa7a1;
+}
+
+
+/* VIDEO */
+
+.video-section {
+    margin-top: 90px;
+
+    width: 100%;
+}
+
+.video-frame {
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    background: #080808;
+
+    border: 1px solid #333333;
+}
+
+.video-frame video {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    max-height: 500px;
+
+    object-fit: cover;
+}
+
+
+/* VIDEO TEXT */
+
+.video-caption {
+    margin-top: 18px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    color: #555555;
 }
 
 
@@ -280,6 +335,16 @@ footer {
         font-size: 21px;
     }
 
+    .video-section {
+        margin-top: 65px;
+    }
+
+    .video-caption {
+        font-size: 8px;
+
+        letter-spacing: 3px;
+    }
+
     .menu {
         margin-top: 80px;
     }
@@ -338,6 +403,42 @@ Muhammed.R
 Words I never said out loud.<br>
 
 A collection of music, thoughts and memories.
+
+</div>
+
+
+<!-- VIDEO -->
+
+<div class="video-section">
+
+    <div class="video-frame">
+
+        <video
+            controls
+            playsinline
+            preload="metadata">
+
+            <source
+                src="6569202398630419723.mp4"
+                type="video/mp4">
+
+            Your browser does not support the video tag.
+
+        </video>
+
+    </div>
+
+    <div class="video-caption">
+
+        <span>
+        A MOMENT KEPT HERE
+        </span>
+
+        <span>
+        01
+        </span>
+
+    </div>
 
 </div>
 
