@@ -32,11 +32,16 @@ body {
     padding: 30px 25px 70px;
 }
 
+
+/* HEADER */
+
 header {
     max-width: 850px;
     width: 100%;
     margin: 0 auto;
+
     padding-bottom: 25px;
+
     border-bottom: 1px solid #333333;
 
     display: flex;
@@ -46,6 +51,7 @@ header {
     font-family: Arial, sans-serif;
     font-size: 10px;
     letter-spacing: 4px;
+
     color: #777777;
 }
 
@@ -58,47 +64,83 @@ header a:hover {
     color: #f2f0eb;
 }
 
+
+/* MAIN */
+
 main {
     max-width: 850px;
     width: 100%;
     margin: 0 auto;
+
     padding: 90px 0 100px;
 }
 
+
+/* LABEL */
+
 .label {
     font-family: Arial, sans-serif;
+
     font-size: 10px;
+
     letter-spacing: 5px;
+
     color: #666666;
+
     margin-bottom: 35px;
 }
 
+
+/* TITLE */
+
 h1 {
     margin: 0;
+
     font-size: clamp(60px, 13vw, 130px);
+
     font-weight: normal;
+
     line-height: 0.9;
+
     letter-spacing: -5px;
 }
 
+
+/* INTRO */
+
 .intro {
     max-width: 600px;
+
     margin-top: 35px;
+
     font-size: 22px;
+
     line-height: 1.5;
+
     color: #aaa7a1;
 }
 
+
+/* DIVIDER */
+
 .divider {
     width: 100%;
+
     height: 1px;
+
     background: #333333;
+
     margin: 75px 0;
 }
 
+
+/* TRACK */
+
 .track {
     max-width: 750px;
+
     padding: 35px 0;
+
     border-top: 1px solid #333333;
 }
 
@@ -106,52 +148,85 @@ h1 {
     border-bottom: 1px solid #333333;
 }
 
+
+/* TRACK TOP */
+
 .track-top {
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
 }
+
+
+/* NUMBER */
 
 .number {
     width: 40px;
 
     font-family: Arial, sans-serif;
+
     font-size: 10px;
+
     letter-spacing: 4px;
+
     color: #555555;
 }
 
+
+/* SONG */
+
 .song {
     flex: 1;
+
     margin-left: 25px;
 }
 
+
+/* SONG TITLE */
+
 .song-title {
     font-size: 30px;
+
     line-height: 1.15;
+
     color: #f2f0eb;
 }
+
+
+/* ARTIST */
 
 .artist {
     margin-top: 12px;
 
     font-family: Arial, sans-serif;
+
     font-size: 9px;
+
     letter-spacing: 4px;
+
     color: #666666;
 }
 
+
+/* PLAY BUTTON */
+
 .play {
     width: 55px;
+
     height: 55px;
 
     border: 1px solid #555555;
+
     border-radius: 50%;
 
     background: transparent;
+
     color: #f2f0eb;
 
     font-size: 17px;
+
     cursor: pointer;
 
     flex-shrink: 0;
@@ -164,13 +239,21 @@ h1 {
 
 .play:hover {
     background: #f2f0eb;
+
     color: #111111;
+
     border-color: #f2f0eb;
 }
+
+
+/* HIDDEN AUDIO */
 
 audio {
     display: none;
 }
+
+
+/* PROGRESS */
 
 .progress-area {
     margin-top: 35px;
@@ -178,6 +261,7 @@ audio {
 
 .progress {
     width: 100%;
+
     height: 1px;
 
     background: #444444;
@@ -189,21 +273,33 @@ audio {
 
 .progress-fill {
     width: 0%;
+
     height: 100%;
+
     background: #f2f0eb;
 }
 
+
+/* TIME */
+
 .time {
     display: flex;
+
     justify-content: space-between;
 
     margin-top: 12px;
 
     font-family: Arial, sans-serif;
+
     font-size: 9px;
+
     letter-spacing: 2px;
+
     color: #555555;
 }
+
+
+/* QUOTE */
 
 .quote {
     max-width: 650px;
@@ -215,12 +311,16 @@ audio {
     border-left: 1px solid #666666;
 
     font-size: 20px;
+
     line-height: 1.6;
 
     font-style: italic;
 
     color: #777777;
 }
+
+
+/* BACK */
 
 .back {
     display: inline-flex;
@@ -256,8 +356,12 @@ audio {
     transform: translateX(-7px);
 }
 
+
+/* FOOTER */
+
 footer {
     max-width: 850px;
+
     width: 100%;
 
     margin: 0 auto;
@@ -279,10 +383,14 @@ footer {
     color: #555555;
 }
 
+
+/* MOBILE */
+
 @media (max-width: 600px) {
 
     .page {
-        padding: 30px 25px 60px;
+        padding:
+            30px 25px 60px;
     }
 
     main {
@@ -307,6 +415,7 @@ footer {
 
     .play {
         width: 50px;
+
         height: 50px;
     }
 
@@ -316,6 +425,7 @@ footer {
 
     footer {
         flex-direction: column;
+
         gap: 15px;
     }
 
@@ -339,7 +449,7 @@ MUHAMMED.R
 </a>
 
 <div>
-MUSIC · 01 — 05
+MUSIC · 01 — 06
 </div>
 
 </header>
@@ -372,7 +482,9 @@ They simply remember something for you.
 <div class="divider"></div>
 
 
+<!-- ========================= -->
 <!-- SONG 01 -->
+<!-- ========================= -->
 
 <div class="track">
 
@@ -402,13 +514,17 @@ data-player="audio1">
 
 </div>
 
-<audio id="audio1" preload="metadata">
+
+<audio
+id="audio1"
+preload="metadata">
 
 <source
 src="Markaz – Xafa bo’ldi sevgi .mp3"
 type="audio/mpeg">
 
 </audio>
+
 
 <div class="progress-area">
 
@@ -422,6 +538,7 @@ id="progress1">
 </div>
 
 </div>
+
 
 <div class="time">
 
@@ -440,7 +557,9 @@ id="progress1">
 </div>
 
 
+<!-- ========================= -->
 <!-- SONG 02 -->
+<!-- ========================= -->
 
 <div class="track">
 
@@ -470,13 +589,17 @@ data-player="audio2">
 
 </div>
 
-<audio id="audio2" preload="metadata">
+
+<audio
+id="audio2"
+preload="metadata">
 
 <source
 src="Markaz – Sevgilim .mp3"
 type="audio/mpeg">
 
 </audio>
+
 
 <div class="progress-area">
 
@@ -490,6 +613,7 @@ id="progress2">
 </div>
 
 </div>
+
 
 <div class="time">
 
@@ -508,7 +632,9 @@ id="progress2">
 </div>
 
 
+<!-- ========================= -->
 <!-- SONG 03 -->
+<!-- ========================= -->
 
 <div class="track">
 
@@ -538,13 +664,17 @@ data-player="audio3">
 
 </div>
 
-<audio id="audio3" preload="metadata">
+
+<audio
+id="audio3"
+preload="metadata">
 
 <source
 src="Bojalar – Sen Kechir.mp3"
 type="audio/mpeg">
 
 </audio>
+
 
 <div class="progress-area">
 
@@ -558,6 +688,7 @@ id="progress3">
 </div>
 
 </div>
+
 
 <div class="time">
 
@@ -576,7 +707,9 @@ id="progress3">
 </div>
 
 
+<!-- ========================= -->
 <!-- SONG 04 -->
+<!-- ========================= -->
 
 <div class="track">
 
@@ -606,12 +739,17 @@ data-player="audio4">
 
 </div>
 
-<audio id="audio4" preload="metadata">
+
+<audio
+id="audio4"
+preload="metadata">
 
 <source
 src="alisher-nahotki-shu-bolsa-sevgi.mp3.mp3"
+type="audio/mpeg">
 
 </audio>
+
 
 <div class="progress-area">
 
@@ -625,6 +763,7 @@ id="progress4">
 </div>
 
 </div>
+
 
 <div class="time">
 
@@ -643,7 +782,9 @@ id="progress4">
 </div>
 
 
+<!-- ========================= -->
 <!-- SONG 05 -->
+<!-- ========================= -->
 
 <div class="track">
 
@@ -673,13 +814,17 @@ data-player="audio5">
 
 </div>
 
-<audio id="audio5" preload="metadata">
+
+<audio
+id="audio5"
+preload="metadata">
 
 <source
 src="Bojalar – Muhabbat .mp3"
 type="audio/mpeg">
 
 </audio>
+
 
 <div class="progress-area">
 
@@ -693,6 +838,7 @@ id="progress5">
 </div>
 
 </div>
+
 
 <div class="time">
 
@@ -711,6 +857,83 @@ id="progress5">
 </div>
 
 
+<!-- ========================= -->
+<!-- SONG 06 -->
+<!-- ========================= -->
+
+<div class="track">
+
+<div class="track-top">
+
+<div class="number">
+06
+</div>
+
+<div class="song">
+
+<div class="song-title">
+Jonimga tegma
+</div>
+
+<div class="artist">
+MARKAZ GURUHI
+</div>
+
+</div>
+
+<button
+class="play"
+data-player="audio6">
+▶
+</button>
+
+</div>
+
+
+<audio
+id="audio6"
+preload="metadata">
+
+<source
+src="Markaz guruhi – Jonimga tegma .mp3"
+type="audio/mpeg">
+
+</audio>
+
+
+<div class="progress-area">
+
+<div
+class="progress"
+data-progress="progress6">
+
+<div
+class="progress-fill"
+id="progress6">
+</div>
+
+</div>
+
+
+<div class="time">
+
+<span id="current6">
+00:00
+</span>
+
+<span id="duration6">
+00:00
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- QUOTE -->
+
 <div class="quote">
 
 “Some songs don't just play —
@@ -719,6 +942,8 @@ a person, or a feeling.”
 
 </div>
 
+
+<!-- BACK -->
 
 <a
 href="index.html"
@@ -752,221 +977,436 @@ MUHAMMED.R
 
 <script>
 
+
+/* ========================= */
+/* PLAYERS */
+/* ========================= */
+
 const players = [
 
     {
-        audio: document.getElementById("audio1"),
-        button: document.querySelector('[data-player="audio1"]'),
-        progress: document.getElementById("progress1"),
-        progressArea: document.querySelector('[data-progress="progress1"]'),
-        current: document.getElementById("current1"),
-        duration: document.getElementById("duration1")
+        audio:
+            document.getElementById("audio1"),
+
+        button:
+            document.querySelector(
+                '[data-player="audio1"]'
+            ),
+
+        progress:
+            document.getElementById(
+                "progress1"
+            ),
+
+        progressArea:
+            document.querySelector(
+                '[data-progress="progress1"]'
+            ),
+
+        current:
+            document.getElementById(
+                "current1"
+            ),
+
+        duration:
+            document.getElementById(
+                "duration1"
+            )
     },
 
-    {
-        audio: document.getElementById("audio2"),
-        button: document.querySelector('[data-player="audio2"]'),
-        progress: document.getElementById("progress2"),
-        progressArea: document.querySelector('[data-progress="progress2"]'),
-        current: document.getElementById("current2"),
-        duration: document.getElementById("duration2")
-    },
 
     {
-        audio: document.getElementById("audio3"),
-        button: document.querySelector('[data-player="audio3"]'),
-        progress: document.getElementById("progress3"),
-        progressArea: document.querySelector('[data-progress="progress3"]'),
-        current: document.getElementById("current3"),
-        duration: document.getElementById("duration3")
+        audio:
+            document.getElementById("audio2"),
+
+        button:
+            document.querySelector(
+                '[data-player="audio2"]'
+            ),
+
+        progress:
+            document.getElementById(
+                "progress2"
+            ),
+
+        progressArea:
+            document.querySelector(
+                '[data-progress="progress2"]'
+            ),
+
+        current:
+            document.getElementById(
+                "current2"
+            ),
+
+        duration:
+            document.getElementById(
+                "duration2"
+            )
     },
 
-    {
-        audio: document.getElementById("audio4"),
-        button: document.querySelector('[data-player="audio4"]'),
-        progress: document.getElementById("progress4"),
-        progressArea: document.querySelector('[data-progress="progress4"]'),
-        current: document.getElementById("current4"),
-        duration: document.getElementById("duration4")
-    },
 
     {
-        audio: document.getElementById("audio5"),
-        button: document.querySelector('[data-player="audio5"]'),
-        progress: document.getElementById("progress5"),
-        progressArea: document.querySelector('[data-progress="progress5"]'),
-        current: document.getElementById("current5"),
-        duration: document.getElementById("duration5")
+        audio:
+            document.getElementById("audio3"),
+
+        button:
+            document.querySelector(
+                '[data-player="audio3"]'
+            ),
+
+        progress:
+            document.getElementById(
+                "progress3"
+            ),
+
+        progressArea:
+            document.querySelector(
+                '[data-progress="progress3"]'
+            ),
+
+        current:
+            document.getElementById(
+                "current3"
+            ),
+
+        duration:
+            document.getElementById(
+                "duration3"
+            )
+    },
+
+
+    {
+        audio:
+            document.getElementById("audio4"),
+
+        button:
+            document.querySelector(
+                '[data-player="audio4"]'
+            ),
+
+        progress:
+            document.getElementById(
+                "progress4"
+            ),
+
+        progressArea:
+            document.querySelector(
+                '[data-progress="progress4"]'
+            ),
+
+        current:
+            document.getElementById(
+                "current4"
+            ),
+
+        duration:
+            document.getElementById(
+                "duration4"
+            )
+    },
+
+
+    {
+        audio:
+            document.getElementById("audio5"),
+
+        button:
+            document.querySelector(
+                '[data-player="audio5"]'
+            ),
+
+        progress:
+            document.getElementById(
+                "progress5"
+            ),
+
+        progressArea:
+            document.querySelector(
+                '[data-progress="progress5"]'
+            ),
+
+        current:
+            document.getElementById(
+                "current5"
+            ),
+
+        duration:
+            document.getElementById(
+                "duration5"
+            )
+    },
+
+
+    {
+        audio:
+            document.getElementById("audio6"),
+
+        button:
+            document.querySelector(
+                '[data-player="audio6"]'
+            ),
+
+        progress:
+            document.getElementById(
+                "progress6"
+            ),
+
+        progressArea:
+            document.querySelector(
+                '[data-progress="progress6"]'
+            ),
+
+        current:
+            document.getElementById(
+                "current6"
+            ),
+
+        duration:
+            document.getElementById(
+                "duration6"
+            )
     }
 
 ];
 
 
+/* ========================= */
+/* FORMAT TIME */
+/* ========================= */
+
 function formatTime(seconds) {
 
     if (!Number.isFinite(seconds)) {
+
         return "00:00";
+
     }
 
+
     const minutes =
-        Math.floor(seconds / 60);
+        Math.floor(
+            seconds / 60
+        );
+
 
     const secs =
-        Math.floor(seconds % 60);
+        Math.floor(
+            seconds % 60
+        );
+
 
     return (
-        String(minutes).padStart(2, "0")
+
+        String(minutes)
+            .padStart(2, "0")
+
         +
+
         ":"
+
         +
-        String(secs).padStart(2, "0")
+
+        String(secs)
+            .padStart(2, "0")
+
     );
 
 }
 
 
-function stopOtherPlayers(currentAudio) {
+/* ========================= */
+/* STOP OTHER PLAYERS */
+/* ========================= */
 
-    players.forEach(function(player) {
+function stopOtherPlayers(
+    currentAudio
+) {
 
-        if (player.audio !== currentAudio) {
+    players.forEach(
+        function(player) {
 
-            player.audio.pause();
-
-            player.button.textContent = "▶";
-
-        }
-
-    });
-
-}
-
-
-players.forEach(function(player) {
-
-
-    player.button.addEventListener(
-        "click",
-        function() {
-
-            if (player.audio.paused) {
-
-                stopOtherPlayers(
-                    player.audio
-                );
-
-                player.audio.play();
-
-            } else {
+            if (
+                player.audio !==
+                currentAudio
+            ) {
 
                 player.audio.pause();
 
+                player.button.textContent =
+                    "▶";
+
             }
 
         }
     );
 
-
-    player.audio.addEventListener(
-        "play",
-        function() {
-
-            player.button.textContent = "Ⅱ";
-
-        }
-    );
+}
 
 
-    player.audio.addEventListener(
-        "pause",
-        function() {
+/* ========================= */
+/* PLAYER EVENTS */
+/* ========================= */
 
-            player.button.textContent = "▶";
-
-        }
-    );
+players.forEach(
+    function(player) {
 
 
-    player.audio.addEventListener(
-        "loadedmetadata",
-        function() {
+        /* PLAY / PAUSE */
 
-            player.duration.textContent =
-                formatTime(
-                    player.audio.duration
-                );
+        player.button.addEventListener(
+            "click",
+            function() {
 
-        }
-    );
+                if (
+                    player.audio.paused
+                ) {
+
+                    stopOtherPlayers(
+                        player.audio
+                    );
+
+                    player.audio.play();
+
+                } else {
+
+                    player.audio.pause();
+
+                }
+
+            }
+        );
 
 
-    player.audio.addEventListener(
-        "timeupdate",
-        function() {
+        /* PLAY */
 
-            if (player.audio.duration) {
+        player.audio.addEventListener(
+            "play",
+            function() {
 
-                const percent =
-                    (
-                        player.audio.currentTime /
+                player.button.textContent =
+                    "Ⅱ";
+
+            }
+        );
+
+
+        /* PAUSE */
+
+        player.audio.addEventListener(
+            "pause",
+            function() {
+
+                player.button.textContent =
+                    "▶";
+
+            }
+        );
+
+
+        /* METADATA */
+
+        player.audio.addEventListener(
+            "loadedmetadata",
+            function() {
+
+                player.duration.textContent =
+                    formatTime(
                         player.audio.duration
-                    ) * 100;
+                    );
+
+            }
+        );
+
+
+        /* PROGRESS */
+
+        player.audio.addEventListener(
+            "timeupdate",
+            function() {
+
+                if (
+                    player.audio.duration
+                ) {
+
+                    const percent =
+                        (
+                            player.audio.currentTime /
+                            player.audio.duration
+                        ) * 100;
+
+
+                    player.progress.style.width =
+                        percent + "%";
+
+                }
+
+
+                player.current.textContent =
+                    formatTime(
+                        player.audio.currentTime
+                    );
+
+            }
+        );
+
+
+        /* CLICK ON PROGRESS */
+
+        player.progressArea.addEventListener(
+            "click",
+            function(event) {
+
+                if (
+                    !player.audio.duration
+                ) {
+
+                    return;
+
+                }
+
+
+                const rect =
+                    player.progressArea
+                        .getBoundingClientRect();
+
+
+                const position =
+                    (
+                        event.clientX -
+                        rect.left
+                    ) / rect.width;
+
+
+                player.audio.currentTime =
+                    position *
+                    player.audio.duration;
+
+            }
+        );
+
+
+        /* END */
+
+        player.audio.addEventListener(
+            "ended",
+            function() {
+
+                player.button.textContent =
+                    "▶";
 
                 player.progress.style.width =
-                    percent + "%";
+                    "0%";
+
+                player.current.textContent =
+                    "00:00";
 
             }
+        );
 
-            player.current.textContent =
-                formatTime(
-                    player.audio.currentTime
-                );
-
-        }
-    );
-
-
-    player.progressArea.addEventListener(
-        "click",
-        function(event) {
-
-            if (!player.audio.duration) {
-                return;
-            }
-
-            const rect =
-                player.progressArea
-                    .getBoundingClientRect();
-
-            const position =
-                (
-                    event.clientX -
-                    rect.left
-                ) / rect.width;
-
-            player.audio.currentTime =
-                position *
-                player.audio.duration;
-
-        }
-    );
-
-
-    player.audio.addEventListener(
-        "ended",
-        function() {
-
-            player.button.textContent = "▶";
-
-            player.progress.style.width = "0%";
-
-            player.current.textContent = "00:00";
-
-        }
-    );
-
-});
-
+    }
+);
 
 </script>
 
