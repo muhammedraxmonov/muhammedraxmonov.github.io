@@ -119,7 +119,7 @@ h1 {
 }
 
 
-/* VIDEO */
+/* FIRST VIDEO */
 
 .video-section {
     margin-top: 90px;
@@ -152,7 +152,7 @@ h1 {
 }
 
 
-/* VIDEO TEXT */
+/* FIRST VIDEO TEXT */
 
 .video-caption {
     margin-top: 18px;
@@ -233,6 +233,75 @@ h1 {
 .menu-link:hover .menu-arrow {
     transform:
         translateX(8px);
+}
+
+
+/* SECOND VIDEO */
+
+.extra-video {
+    width: 100%;
+
+    max-width: 750px;
+
+    margin-top: 75px;
+
+    padding-top: 45px;
+
+    border-top: 1px solid #333333;
+}
+
+.extra-video-label {
+    font-family: Arial, sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    color: #555555;
+
+    margin-bottom: 25px;
+}
+
+.extra-video-frame {
+    width: 100%;
+
+    overflow: hidden;
+
+    background: #080808;
+
+    border: 1px solid #333333;
+}
+
+.extra-video-frame video {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    background: #080808;
+}
+
+.extra-video-caption {
+    margin-top: 20px;
+
+    font-size: 24px;
+
+    line-height: 1.3;
+
+    color: #f2f0eb;
+}
+
+.extra-video-date {
+    margin-top: 12px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: #555555;
 }
 
 
@@ -349,6 +418,16 @@ footer {
         margin-top: 80px;
     }
 
+    .extra-video {
+        margin-top: 60px;
+
+        padding-top: 35px;
+    }
+
+    .extra-video-caption {
+        font-size: 21px;
+    }
+
     .status {
         margin-top: 110px;
     }
@@ -407,7 +486,7 @@ A collection of music, thoughts and memories.
 </div>
 
 
-<!-- VIDEO -->
+<!-- FIRST VIDEO -->
 
 <div class="video-section">
 
@@ -422,7 +501,8 @@ A collection of music, thoughts and memories.
                 src="6569202398630419723.mp4"
                 type="video/mp4">
 
-            Your browser does not support the video tag.
+            Your browser does not support
+            the video tag.
 
         </video>
 
@@ -517,6 +597,43 @@ GUESTBOOK
 
 </a>
 
+
+</div>
+
+
+<!-- SECOND VIDEO -->
+
+<div class="extra-video">
+
+    <div class="extra-video-label">
+        MOMENT · 02
+    </div>
+
+    <div class="extra-video-frame">
+
+        <video
+            controls
+            playsinline
+            preload="metadata">
+
+            <source
+                src="496780588554786703.mp4"
+                type="video/mp4">
+
+            Your browser does not support
+            the video tag.
+
+        </video>
+
+    </div>
+
+    <div class="extra-video-caption">
+        Another moment I chose to keep.
+    </div>
+
+    <div class="extra-video-date">
+        2026
+    </div>
 
 </div>
 
