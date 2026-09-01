@@ -449,7 +449,7 @@ MUHAMMED.R
 </a>
 
 <div>
-MUSIC · 01 — 06
+MUSIC · 01 — 07
 </div>
 
 </header>
@@ -932,6 +932,81 @@ id="progress6">
 </div>
 
 
+<!-- ========================= -->
+<!-- SONG 07 -->
+<!-- ========================= -->
+
+<div class="track">
+
+<div class="track-top">
+
+<div class="number">
+07
+</div>
+
+<div class="song">
+
+<div class="song-title">
+Dunyo
+</div>
+
+<div class="artist">
+INDI
+</div>
+
+</div>
+
+<button
+class="play"
+data-player="audio7">
+▶
+</button>
+
+</div>
+
+
+<audio
+id="audio7"
+preload="metadata">
+
+<source
+src="Indi – Dunyo.mp3"
+type="audio/mpeg">
+
+</audio>
+
+
+<div class="progress-area">
+
+<div
+class="progress"
+data-progress="progress7">
+
+<div
+class="progress-fill"
+id="progress7">
+</div>
+
+</div>
+
+
+<div class="time">
+
+<span id="current7">
+00:00
+</span>
+
+<span id="duration7">
+00:00
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+
 <!-- QUOTE -->
 
 <div class="quote">
@@ -1166,6 +1241,37 @@ const players = [
         duration:
             document.getElementById(
                 "duration6"
+            )
+    },
+
+
+    {
+        audio:
+            document.getElementById("audio7"),
+
+        button:
+            document.querySelector(
+                '[data-player="audio7"]'
+            ),
+
+        progress:
+            document.getElementById(
+                "progress7"
+            ),
+
+        progressArea:
+            document.querySelector(
+                '[data-progress="progress7"]'
+            ),
+
+        current:
+            document.getElementById(
+                "current7"
+            ),
+
+        duration:
+            document.getElementById(
+                "duration7"
             )
     }
 
